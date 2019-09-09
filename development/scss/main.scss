@@ -76,3 +76,82 @@ body{
      }
    }
  }
+
+
+ // foooooooooooter
+
+
+ .main-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 200px;
+  background: #5b605f;
+  color: white;
+
+}
+
+.left-lorem {
+    width: 33.333%;
+}
+
+.central-lorem {
+    width: 33.333%;
+    line-height: 25px;
+    text-align: left;
+  ul {
+      padding-inline-start: 20px;
+  }
+  }
+.right-lorem {
+    width: 33.333%;
+}
+
+.left-lorem div {
+    width: 240px;
+    text-align: left;
+}
+
+.right-lorem {
+    input {
+        padding: 5px;
+        margin-right: 0;
+        box-sizing: border-box;
+    }
+    .button {
+        margin-left: 0;
+        background: #ff6600; 
+        border: 2.5px solid #ff6600;
+        box-sizing: border-box;
+    }
+      ul {
+          width: 300px;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          padding-inline-start: 0;
+
+      li {
+          text-decoration: none;
+          font-size: 30px;
+          list-style-type: none;
+          margin-right: 30px;
+          a {
+              color: white;
+          }
+          a:hover {
+              color: #ff6600
+          }
+          }
+      }
+  }
+
+  .copyright {
+      background: #4a4a49;
+      text-align: center;
+      padding: 20px;
+      color: white;
+      a {
+          text-decoration: none;
+          color: #ff6600;
+      }
+  }
