@@ -8,10 +8,12 @@
 //body{
 //  background-color: #BADA55;
 //}
-header{
+.indexHeader{
   display: flex;
   justify-content: center;
   align-items: center;
+  background: #5B605F;
+
 }
  .headerContainer{
    display: flex;
@@ -19,7 +21,6 @@ header{
    width: 1425px;
    height: 100px;
    background: #5B605F;
-   border-radius: 3px;
    h1{
      a{
        text-decoration: none;
@@ -65,3 +66,4 @@ header{
      }
    }
  }
+
