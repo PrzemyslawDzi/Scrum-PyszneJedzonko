@@ -6,8 +6,13 @@
 
 
 @import "partials/reset";
+@import "partials/grid";
 
-@import "modules/app";
+@import "font_awesome/fontawesome.scss";
+@import "font_awesome/_icons.scss";
+@import "font_awesome/solid.scss";
+
+ @import "modules/app";
 
 body{
   background-color: #BADA55;
