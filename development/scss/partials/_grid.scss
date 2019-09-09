@@ -1,0 +1,20 @@
+$gap: 10px;
+$columns : 18;
+$bp: 768px;
+
+.container {
+  padding-left: $gap;
+  padding-right: $gap;
+}
+
+.row {
+  @media (min-width: $bp) {
+    display: flex;
+
+    @for $i from 1 through $columns {
+      .col-#{$i} {
+        width: (100 / $columns * $i) * 1%;
+      }
+    }
+  }
+}

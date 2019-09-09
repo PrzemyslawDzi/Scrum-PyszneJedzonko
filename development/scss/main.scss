@@ -4,9 +4,17 @@
  //Sass:
  //https://fontawesome.com/how-to-use/on-the-web/using-with/sass
 
-@import "partials/reset";
 
-body {
+@import "partials/reset";
+@import "partials/grid";
+
+@import "font_awesome/fontawesome.scss";
+@import "font_awesome/_icons.scss";
+@import "font_awesome/solid.scss";
+
+ @import "modules/app";
+
+body{
   background-color: #BADA55;
 }
 
