@@ -7,6 +7,7 @@
 
 @import "partials/reset";
 @import "partials/grid";
+@import "partials/colors";
 
 @import "font_awesome/fontawesome.scss";
 @import "font_awesome/_icons.scss";
@@ -15,7 +16,7 @@
  @import "modules/app";
 
 body{
-  background-color: #BADA55;
+  background-color: dodgerblue;
 }
 
 .indexHeader{

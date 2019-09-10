@@ -16,3 +16,24 @@ for (let i = 0; i < arrayAllLi.length; i++) {
         arrayAllLi[i].classList.remove("visible");
     })
 }
+
+
+// ======================== wysyłanie formularza =========================
+
+let input = document.querySelector(".main-app-input");
+let btn = document.querySelector(".main-app-button");
+
+btn.addEventListener("click", function () {
+    if (input.value.length < 3 || input.value.length > 15) {
+        input.value = "";
+        return alert("Imię musi posiadać od 3 do 15 znaków.")
+    }
+
+    let name = document.querySelector(".main-app-input-name");
+    name.innerText = input.value;
+    // input.value = "";
+
+    let welcomeScreen = document.querySelector(".main-app-welcome-screen");
+    welcomeScreen.style.display = "none";
+});
+
