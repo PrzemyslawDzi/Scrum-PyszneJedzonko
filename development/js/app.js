@@ -18,7 +18,8 @@ for (let i = 0; i < arrayAllLi.length; i++) {
 }
 
 
-// ======================== wysyłanie formularza =========================
+
+// ======================== wysyłanie formularza cz1 =========================
 
 let input = document.querySelector(".main-app-input");
 let btn = document.querySelector(".main-app-button");
@@ -29,11 +30,30 @@ btn.addEventListener("click", function () {
         return alert("Imię musi posiadać od 3 do 15 znaków.")
     }
 
+
+
+
+
+    // ======================== local storage =========================
+
+    let userName = input.value;
+    localStorage.setItem("savedName", userName);
+
+    console.log(localStorage.getItem("savedName"));
+
+
+
+
+
+
+// ======================== wysyłanie formularza cz2 =========================
+
     let name = document.querySelector(".main-app-input-name");
-    name.innerText = input.value;
-    // input.value = "";
+    name.innerText = localStorage.getItem("savedName");
 
     let welcomeScreen = document.querySelector(".main-app-welcome-screen");
     welcomeScreen.style.display = "none";
-});
 
+
+
+});
