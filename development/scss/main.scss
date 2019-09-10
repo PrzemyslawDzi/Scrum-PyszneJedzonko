@@ -61,7 +61,7 @@ body{
        color: white;
        transition: 0.2s;
        &:hover{
-         color: #E58A20;
+         color: $colorBtn;
        }
      }
 
@@ -331,8 +331,6 @@ body{
       
   }
 }
-
-
 
 
 
