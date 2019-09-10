@@ -4,10 +4,19 @@
  //Sass:
  //https://fontawesome.com/how-to-use/on-the-web/using-with/sass
 
-@import "partials/reset";
 
-body {
-  background-color: #BADA55;
+@import "partials/reset";
+@import "partials/grid";
+@import "partials/colors";
+
+@import "font_awesome/fontawesome.scss";
+@import "font_awesome/_icons.scss";
+@import "font_awesome/solid.scss";
+
+ @import "modules/app";
+
+body{
+  background-color: dodgerblue;
 }
 
 .indexHeader{
@@ -69,6 +78,97 @@ body {
    }
  }
 
+// carousel
+
+/* Slideshow container */
+.carouselSlideshow-container {
+  max-width: 1440px;
+  height: 500px;
+  position: relative;
+  margin: auto;
+  background-color: rgb(235, 235, 235);
+}
+
+/* Hide the images by default */
+.carouselMySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.carouselPrev, .carouselNext {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.carouselNext {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.carouselPrev:hover, .carouselNext:hover {
+  background-color: rgb(255,255,255);
+}
+
+/* Caption text */
+.carouselText {
+  font-weight: normal;
+  font-style: normal;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  position: absolute;
+  top: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  width: 100%;
+  text-align: center;
+}
+
+.carouselText>h2{
+  font-size: 48px;
+  line-height: 55px;
+}
+
+.carouselText>p{
+  font-size: 32px;
+  line-height: 36px;
+  overflow-wrap: break-word;
+  display: inline-block;
+  width: 825px;
+  font-weight: 400;
+}
+
+/* Fading animation */
+.carouselFade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
 
  // foooooooooooter
  .main_width{
@@ -80,6 +180,8 @@ body {
   display: flex;
   justify-content: space-between;
   background: #5b605f;
+  padding-top: 40px;
+  padding-bottom: 40px;
   color: white;
 
 }
@@ -165,3 +267,8 @@ body {
 #footer {
   background: #5B605F;
 }
+
+
+// call to action
+
+
