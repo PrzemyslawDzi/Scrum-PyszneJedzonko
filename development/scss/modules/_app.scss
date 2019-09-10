@@ -118,7 +118,7 @@
 .main-app-welcome-screen {
   background: $colorBackgroundDashboard;
   border: 1px dashed $colorTablets;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   color: $colorHeader;
@@ -143,6 +143,7 @@
     font-size: 20px;
   }
 }
+
 
 
 .main-app-button {
@@ -189,10 +190,6 @@
 .main-app-buttons {
   display: flex;
   justify-content: space-between;
-
-  & .visible {
-    display: flex;
-  }
 }
 
 
@@ -204,7 +201,7 @@
   border: dashed 1px $colorSuccess;
   font-size: 24px;
   letter-spacing: 1px;
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
