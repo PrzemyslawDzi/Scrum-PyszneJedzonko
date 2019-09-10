@@ -68,14 +68,15 @@
     height: 73px;
     display: flex;
     position: relative;
-    padding-left: 20px;
 
     a {
       text-decoration: none;
       color: #ffffff;
+      width: 100%;
       font-size: 22px;
       font-family: "Open Sans", sans-serif;
       font-weight: 100;
+      padding: 20px;
     }
   }
 
@@ -123,7 +124,7 @@
   color: $colorHeader;
   padding: 50px;
   box-sizing: border-box;
-  height: calc(100% - 60px);
+  height: 100%;
 
   p {
     text-align: center;
@@ -210,7 +211,7 @@
   cursor: pointer;
 
   .fa-plus-square {
-    font-family: "Font Awesome 5 Free";
+    font-family: "Font Awesome 5 Free", sans-serif;
     font-size: 90px;
     padding-bottom: 20px;
   }
