@@ -171,12 +171,14 @@ body{
 }
 
  // foooooooooooter
-
+ .main_width{
+  width: 1200px;
+  margin: 0 auto;
+}
 
  .main-footer {
   display: flex;
   justify-content: space-between;
-  padding: 40px 200px;
   background: #5b605f;
   color: white;
 
@@ -201,13 +203,20 @@ body{
 .left-lorem div {
     width: 240px;
     text-align: left;
+  
+}
+
+.left-lorem {
+  line-height: 20px;
 }
 
 .right-lorem {
+    line-height: 25px;
     input {
         padding: 5px;
         margin-right: 0;
         box-sizing: border-box;
+        margin-bottom: 10px;
     }
     .button {
         margin-left: 0;
@@ -247,3 +256,12 @@ body{
           color: #ff6600;
       }
   }
+
+  .main_width{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#footer {
+  background: #5B605F;
+}
