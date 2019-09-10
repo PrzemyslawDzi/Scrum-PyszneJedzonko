@@ -16,7 +16,7 @@
  @import "modules/app";
 
 body{
-  background-color: dodgerblue;
+  background-color: #5b605f;
 }
 
 .indexHeader{
@@ -183,19 +183,42 @@ body{
   padding-top: 40px;
   padding-bottom: 40px;
   color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
 }
 
 .left-lorem {
     width: 33.333%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    p {
+      text-align: left;
+    }
+    h2 {
+      text-align: left;
+      font-size: 20px;
+    }
+   
 }
 
 .central-lorem {
     width: 33.333%;
     line-height: 25px;
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    h2 {
+      text-align: left;
+      font-size: 20px;
+    }
   ul {
       padding-inline-start: 20px;
+      list-style-type: disc;
   }
   }
 .right-lorem {
@@ -204,7 +227,7 @@ body{
 
 .left-lorem div {
     width: 240px;
-    text-align: left;
+    text-align: center;
   
 }
 
@@ -214,6 +237,14 @@ body{
 
 .right-lorem {
     line-height: 25px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+      text-align: left;
+      font-size: 20px;
+    }
     input {
         padding: 5px;
         margin-right: 0;
@@ -232,6 +263,8 @@ body{
           flex-direction: row;
           justify-content: flex-start;
           padding-inline-start: 0;
+          margin-left: 70px;
+          margin-top: 5px;
 
       li {
           text-decoration: none;
@@ -268,7 +301,38 @@ body{
   background: #5B605F;
 }
 
-
 // call to action
+
+.callTo {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  color: white;
+  line-height: 25px;
+  position: relative;
+  h3 {
+    font-size: 25px;
+  }
+  p{
+    font-size: 16px;
+  }
+  .button_news {
+    margin-left: 0;
+        background: #ff6600; 
+        border: 2.5px solid #ff6600;
+        box-sizing: border-box;
+        height: 40px;
+        color: white;
+        width: 200px;
+        position: absolute;
+        left: 900px;
+        bottom: 50px;
+        cursor: pointer;
+      
+  }
+}
+
+
+
 
 
