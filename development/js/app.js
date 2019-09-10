@@ -56,4 +56,14 @@ btn.addEventListener("click", function () {
 
 
 
+// ======================== pokazanie pulpitu z funkcjami =========================
+
+    let elementWithButtons = document.querySelector(".main-app-buttons");
+    let buttons = elementWithButtons.querySelectorAll("button");
+    console.log(buttons);
+
+
+    buttons.forEach(function (el) {
+        el.classList.add("visible");
+    });
 });
