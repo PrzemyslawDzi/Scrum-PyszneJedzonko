@@ -67,3 +67,26 @@ btn.addEventListener("click", function () {
         el.classList.add("visible");
     });
 });
+
+
+
+
+
+
+// ======================== dodaj nowy przepis =========================
+
+let btnAddRecipe = document.querySelector(".main-app-add-recipe");
+btnAddRecipe.addEventListener("click", function () {
+
+    alert("Dodaj nowy przepis - taka funkcja będzie, jak już będzie layout")
+});
+
+
+
+// ======================== dodaj nowy plan =========================
+
+let btnAddPlan = document.querySelector(".main-app-add-plan");
+btnAddPlan.addEventListener("click", function () {
+
+    alert("Dodaj nowy plan - taka funkcja będzie, jak już będzie layout")
+});
