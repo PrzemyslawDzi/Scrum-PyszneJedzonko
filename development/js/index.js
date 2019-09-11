@@ -18,3 +18,10 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
 } 
+
+
+let button = document.querySelector(".button_send")
+
+button.addEventListener("click", function (){
+  alert("Dziękujemy za dołączenie do newslettera!");
+})
