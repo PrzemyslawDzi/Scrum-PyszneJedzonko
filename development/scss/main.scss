@@ -5,7 +5,10 @@
  //https://fontawesome.com/how-to-use/on-the-web/using-with/sass
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 06471143c8c670736fe6b77336b2456113697956
  @import "partials/reset";
  @import "partials/grid";
  @import "partials/colors";
@@ -304,41 +307,7 @@
    background: #5B605F;
  }
  
- // call to action
- 
-#callTo {
-  background: #4a4a49;
-}
- .callTo {
-   display: flex;
-   justify-content: space-between;
-   padding: 60px;
-   color: white;
-   line-height: 25px;
-   position: relative;
-   h3 {
-     font-size: 35px;
-   }
-   p{
-     font-size: 20px;
-   }
-   .button_news {
-     margin-left: 0;
-         background: #ff6600; 
-         border: 2.5px solid #ff6600;
-         box-sizing: border-box;
-         height: 40px;
-         color: white;
-         width: 200px;
-         position: absolute;
-         left: 900px;
-         bottom: 80px;
-         cursor: pointer;
-       
-   }
- }
- // call to action
- 
+
  
  //About App
  #aboutApp{
@@ -463,6 +432,51 @@
       border: 0;
       cursor: pointer;
 
+<<<<<<< HEAD
+=======
+    }
+    .form_mail {
+      padding: 10px;
+      width: 200px;
+    }
+   }
+ }
+
+ #aboutMe {
+   background: #EBEBEB;
+   height: 500px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+   .main_width3{
+     display: flex;
+     align-items: flex-start;
+     width: 1200px;
+     margin: 0;
+    
+     
+   .client_image {
+     height: 300px;
+     width: 300px;
+     background: #5B605F;
+     margin-left: 150px;
+    }
+    h3{
+      font-size: 35px;
+      margin-left: 100px;
+    }
+    p {
+      margin-left: 100px;
+      font-size: 20px;
+    }
+    .paragraph {
+      width: 600px;
+    }
+  }
+ 
+
+>>>>>>> 06471143c8c670736fe6b77336b2456113697956
   .main_width{
     width: 1200px;
     margin: 0 auto;
@@ -503,9 +517,9 @@
       
   }
 }
-// call to action
 
 
+<<<<<<< HEAD
 //About App
 #aboutApp{
   display: flex;
@@ -653,3 +667,5 @@
     }
   }
 }
+=======
+>>>>>>> 06471143c8c670736fe6b77336b2456113697956
