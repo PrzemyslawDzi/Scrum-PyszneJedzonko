@@ -27,13 +27,12 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   background: #4a4a49;
- 
+
  }
   .headerContainer{
     display: flex;
     justify-content: space-between;
-    width: 1425px;
+    width: 1450px;
     height: 100px;
     background: #4a4a49;
     h1{
@@ -86,7 +85,7 @@
  
  /* Slideshow container */
  .carouselSlideshow-container {
-   max-width: 1440px;
+   max-width: 1450px;
    height: 500px;
    position: relative;
    margin: auto;
@@ -483,34 +482,47 @@
 }
 
 // call to action
-
-
-.callTo {
+#callTo{
   display: flex;
-  justify-content: space-between;
-  padding: 60px;
+  justify-content: center;
+}
+.calltoContainer{
+  display: flex;
+  align-items: center;
+  width: 1450px;
+  background: #4a4a49;
+  font-family: 'Open Sans', sans-serif;
+  height: 250px;
+
+}
+.callToCL {
+  display: flex;
   color: white;
   line-height: 25px;
-  position: relative;
+  margin-left: 140px;
   h3 {
-    font-size: 25px;
+    font-size: 38px;
+    margin-bottom: 14px;
   }
   p{
-    font-size: 16px;
+    font-size: 22px;
+    margin-bottom: 16px;
+    width:780px;
   }
   .button_news {
-    margin-left: 0;
-        background: #ff6600; 
-        border: 2.5px solid #ff6600;
-        box-sizing: border-box;
-        height: 40px;
-        color: white;
-        width: 200px;
-        position: absolute;
-        left: 900px;
-        bottom: 80px;
-        cursor: pointer;
-      
+    background: #ff6600;
+    border: none;
+    height: 60px;
+    color: white;
+    width: 225px;
+    cursor: pointer;
+    margin-left: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 33px;
+    font-size: 20px;
+    font-weight: bold;
   }
 }
 
@@ -590,7 +602,6 @@
        margin-top: 160px;
        padding-left: 10px;
        p{
-         //margin-top: 20px;
          margin: 20px 20px 0 20px;
          line-height: 29px;
        }
@@ -651,6 +662,8 @@
   width: 165px;
   cursor: pointer;
   margin-right: 10px;
+  font-size: 20px;
+  font-weight: bold;
 
 
 }
@@ -692,5 +705,4 @@
     }
   }
 }
-
 
