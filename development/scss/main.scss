@@ -5,10 +5,10 @@
  //https://fontawesome.com/how-to-use/on-the-web/using-with/sass
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 06471143c8c670736fe6b77336b2456113697956
+//<<<<<<< HEAD
+//
+//=======
+//>>>>>>> 06471143c8c670736fe6b77336b2456113697956
  @import "partials/reset";
  @import "partials/grid";
  @import "partials/colors";
@@ -618,47 +618,79 @@
  }
 
 
-#features {
-  background: #5b605f;
+#newsletter {
+  display: flex;
+  justify-content: center;
+      .newsletterContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1450px;
+        background: #5b605f;
+        color: white;
+        height: 155px;
+        font-family: 'Open Sans', sans-serif;
+        h3{
+          font-size: 50px;
+          margin-right: 130px;
+        }
 
     }
-    .form_mail {
-      padding: 10px;
-      width: 200px;
-    }
-   }
+
  }
 
- #aboutMe {
-   background: #EBEBEB;
-   height: 500px;
+#newsletterEmail{
+  height: 56px;
+  width: 288px;
+}
+#newsletterSubmit{
+  height: 62px;
+  background: #ff6600;
+  border: none;
+  color: white;
+  width: 165px;
+  cursor: pointer;
+  margin-right: 10px;
+
+
+}
+
+
+ #AboutMe {
    display: flex;
    align-items: center;
    justify-content: center;
- }
-   .main_width3{
+   .aboutMeContainer {
+     background: #EBEBEB;
      display: flex;
-     align-items: flex-start;
-     width: 1200px;
-     margin: 0;
-    
-     
-   .client_image {
-     height: 300px;
-     width: 300px;
+     align-items: center;
+     width: 1450px;
+     height: 550px;
+     font-family: 'Open Sans', sans-serif;
+     .title_text{
+       margin-bottom: 133px;
+     }
+     .client_image {
+     height: 355px;
+     width: 338px;
      background: #5B605F;
      margin-left: 150px;
     }
     h3{
-      font-size: 35px;
+      font-size: 37px;
       margin-left: 100px;
+      margin-bottom: 9px;
     }
     p {
       margin-left: 100px;
-      font-size: 20px;
+      font-size: 25px;
+      width: 695px;
+      line-height: 31px;
     }
     .paragraph {
       width: 600px;
     }
   }
 }
+
+
