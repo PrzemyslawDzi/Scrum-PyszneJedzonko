@@ -118,7 +118,7 @@
 .main-app-welcome-screen {
   background: $colorBackgroundDashboard;
   border: 1px dashed $colorTablets;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   color: $colorHeader;
@@ -143,6 +143,7 @@
     font-size: 20px;
   }
 }
+
 
 
 .main-app-button {
@@ -189,10 +190,6 @@
 .main-app-buttons {
   display: flex;
   justify-content: space-between;
-
-  & .visible {
-    display: flex;
-  }
 }
 
 
@@ -204,7 +201,7 @@
   border: dashed 1px $colorSuccess;
   font-size: 24px;
   letter-spacing: 1px;
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -216,3 +213,78 @@
     padding-bottom: 20px;
   }
 }
+
+.main-app-notifications {
+  display: flex;
+  flex-direction: column;
+
+
+  button {
+    border: none;
+    background: $colorBackgroundDashboard;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+  }
+}
+
+
+
+.main-app-notification-recipies,
+.main-app-notification-plan,
+.main-app-notification-welcome {
+  background: $colorBackgroundDashboard;
+  font-size: 22px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+
+  b {
+    font-size: 1.7em;
+    padding: 0 7px;
+  }
+
+  span {
+    padding: 0 7px;
+  }
+}
+
+
+.main-app-notification-recipies {
+  border: 1px dashed $colorInfo;
+  color: $colorInfo;
+
+  button{
+    color: $colorInfo;
+  }
+ }
+
+
+.main-app-notification-plan {
+  border: 1px dashed $colorWarning;
+  color: $colorWarning;
+
+  button{
+    color: $colorWarning;
+  }
+}
+
+
+.main-app-notification-welcome {
+  border: 1px dashed $colorSuccess;
+  color: $colorSuccess;
+
+  button{
+    color: $colorSuccess;
+  }
+}
+
+
+
+
+
+

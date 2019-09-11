@@ -303,41 +303,7 @@
    background: #5B605F;
  }
  
- // call to action
- 
-#callTo {
-  background: #4a4a49;
-}
- .callTo {
-   display: flex;
-   justify-content: space-between;
-   padding: 60px;
-   color: white;
-   line-height: 25px;
-   position: relative;
-   h3 {
-     font-size: 35px;
-   }
-   p{
-     font-size: 20px;
-   }
-   .button_news {
-     margin-left: 0;
-         background: #ff6600; 
-         border: 2.5px solid #ff6600;
-         box-sizing: border-box;
-         height: 40px;
-         color: white;
-         width: 200px;
-         position: absolute;
-         left: 900px;
-         bottom: 80px;
-         cursor: pointer;
-       
-   }
- }
- // call to action
- 
+
  
  //About App
  #aboutApp{
@@ -503,3 +469,46 @@
     }
   }
  
+
+  .main_width{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#footer {
+  background: #5B605F;
+}
+
+// call to action
+
+
+.callTo {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  color: white;
+  line-height: 25px;
+  position: relative;
+  h3 {
+    font-size: 25px;
+  }
+  p{
+    font-size: 16px;
+  }
+  .button_news {
+    margin-left: 0;
+        background: #ff6600; 
+        border: 2.5px solid #ff6600;
+        box-sizing: border-box;
+        height: 40px;
+        color: white;
+        width: 200px;
+        position: absolute;
+        left: 900px;
+        bottom: 80px;
+        cursor: pointer;
+      
+  }
+}
+
+
