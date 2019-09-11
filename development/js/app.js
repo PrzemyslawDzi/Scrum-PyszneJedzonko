@@ -35,6 +35,9 @@ if (!(localStorage.getItem("savedName"))) {
     let elementWithButtons = document.querySelector(".main-app-buttons");
     elementWithButtons.style.display = "none";
 
+    let tableWithPlan = document.querySelector(".main-app-table");
+    tableWithPlan.style.display = "none";
+
 
     let mainAppDashboard = document.querySelector(".main-app-welcome-screen");
     mainAppDashboard.style.display = "flex";
@@ -71,6 +74,7 @@ if (!(localStorage.getItem("savedName"))) {
 
         elementWithButtons.style.display = "flex";
 
+        tableWithPlan.style.display = "block";
     });
 }
 
@@ -131,4 +135,19 @@ btnCloseWlc.addEventListener("click", function () {
     let alertWlc = document.querySelector(".main-app-notification-welcome");
 
     alertWlc.parentElement.removeChild(alertWlc);
+});
+
+
+// ============== btn tabela prev ==============
+let btnPrev = document.querySelector("#prev");
+console.log(btnPrev);
+btnPrev.addEventListener("click", function () {
+    alert("Nie ma czego zmieniac, bo nie ma zadnych planow")
+});
+
+
+// ============== btn tabela next ==============
+let btnNext = document.querySelector("#next");
+btnNext.addEventListener("click", function () {
+    alert("Coś potrzeba???")
 });

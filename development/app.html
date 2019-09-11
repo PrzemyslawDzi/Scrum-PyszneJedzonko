@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="./css/main.css" />
 </head>
 <body class="main-app">
+
+<!--header do app.html-->
   <header class="main-app-header row">
     <div class="main-app-header-container col-9">
       <h1 class="main-app-title">
@@ -26,7 +28,10 @@
       </div>
     </div>
   </header>
+
   <div class="main-app-content row">
+
+    <!--nawigacja po lewej stronie-->
     <nav class="main-app-menu col-3">
       <ul>
         <li>
@@ -46,15 +51,19 @@
         </li>
       </ul>
     </nav>
+
+
+<!--    okno dla nowego użytkownika z formularzem do wpisania imienia-->
     <div class="main-app-dashboard col-15">
+
       <div class="main-app-welcome-screen">
-      <p>
-        <span>
-          Witaj,
-        </span><br>
-        wygląda na to że jesteś tutaj<br>
-        pierwszy raz!
-      </p>
+        <p>
+          <span>
+            Witaj,
+          </span><br>
+          wygląda na to że jesteś tutaj<br>
+          pierwszy raz!
+        </p>
         <input id="name" type="text" class="main-app-input" placeholder="tutaj wpisz jak masz na imię">
         <button class="main-app-button" type="submit">
           Gotowe!
@@ -64,35 +73,120 @@
           dla Ciebie naszą aplikację :)
         </p>
       </div>
-      <div class="main-app-functions">
-        <div class="main-app-buttons">
-          <button class="main-app-add-recipe col-3">
-            <div class="far fa-plus-square"></div>
-            dodaj przepis
-          </button>
-          <button class="main-app-add-plan col-3">
-            <div class="far fa-plus-square"></div>
-            dodaj plan
-          </button>
-          <div class ="main-app-notifications col-9">
-            <div class = "main-app-notification-recipies">
-              <b class="fas fa-info-circle"></b>
-              Masz już<span>0</span>przepisów, nieźle!
-              <button class="fas fa-window-close main-app-btn-recipies"></button>
-            </div>
-            <div class="main-app-notification-plan">
-              <b class="fas fa-exclamation-circle"></b>
-              Pamiętaj, aby dodać plan!
-              <button class="fas fa-window-close main-app-btn-plan"></button>
-            </div>
-            <div class="main-app-notification-welcome">
-              <b class="fas fa-check-circle"></b>
-              Świetnie że jesteś! Udanego planowania i smacznego! :)
-              <button class="fas fa-window-close main-app-btn-welcome"></button>
-            </div>
+
+
+<!--      widżety przyciski-->
+      <div class="main-app-buttons">
+
+        <button class="main-app-add-recipe col-3">
+          <b class="far fa-plus-square"></b>
+          dodaj przepis
+        </button>
+
+        <button class="main-app-add-plan col-3">
+          <b class="far fa-plus-square"></b>
+          dodaj plan
+        </button>
+
+
+        <!--      widżety alerty-->
+        <div class ="main-app-notifications col-9">
+
+          <div class = "main-app-notification-recipies">
+            <b class="fas fa-info-circle"></b>
+            Masz już<span>0</span>przepisów, nieźle!
+            <button class="fas fa-window-close main-app-btn-recipies"></button>
+          </div>
+
+          <div class="main-app-notification-plan">
+            <b class="fas fa-exclamation-circle"></b>
+            Pamiętaj, aby dodać plan!
+            <button class="fas fa-window-close main-app-btn-plan"></button>
+          </div>
+
+          <div class="main-app-notification-welcome">
+            <b class="fas fa-check-circle"></b>
+            Świetnie że jesteś! Udanego planowania i smacznego! :)
+            <button class="fas fa-window-close main-app-btn-welcome"></button>
           </div>
         </div>
       </div>
+
+
+
+<!--      tablica z planem-->
+      <div class ="main-app-table" >
+        <table class="main-app-table col-18">
+          <thead class="main-app-table-header">
+            <tr class="main-app-table-title">
+              <th colspan="7" id="table-header">Twój plan na <span>{nr_tygodnia}</span>tydzień:</th>
+            </tr>
+            <tr class="main-app-table-days">
+              <th>Poniedziałek</th>
+              <th>Wtorek</th>
+              <th>Środa</th>
+              <th>Czwartek</th>
+              <th>Piątek</th>
+              <th>Sobota</th>
+              <th>Niedziela</th>
+            </tr>
+          </thead>
+          <tbody class="main-app-table-plan">
+            <tr>
+              <td>śniadanie</td>
+              <td>śniadanie</td>
+              <td>śniadanie</td>
+              <td>śniadanie</td>
+              <td>śniadanie</td>
+              <td>śniadanie</td>
+              <td>śniadanie</td>
+            </tr>
+            <tr>
+              <td>drugie śniadanie</td>
+              <td>drugie śniadanie</td>
+              <td>drugie śniadanie</td>
+              <td>drugie śniadanie</td>
+              <td>drugie śniadanie</td>
+              <td>drugie śniadanie</td>
+              <td>drugie śniadanie</td>
+            </tr>
+            <tr>
+              <td>zupa</td>
+              <td>zupa</td>
+              <td>zupa</td>
+              <td>zupa</td>
+              <td>zupa</td>
+              <td>zupa</td>
+              <td>zupa</td>
+            </tr>
+            <tr>
+              <td>drugie danie</td>
+              <td>drugie danie</td>
+              <td>drugie danie</td>
+              <td>drugie danie</td>
+              <td>drugie danie</td>
+              <td>drugie danie</td>
+              <td>drugie danie</td>
+            </tr>
+            <tr>
+              <td>kolacja</td>
+              <td>kolacja</td>
+              <td>kolacja</td>
+              <td>kolacja</td>
+              <td>kolacja</td>
+              <td>kolacja</td>
+              <td>kolacja</td>
+            </tr>
+          </tbody>
+
+        </table>
+        <div class="main-app-table-buttons">
+          <button id="prev"><b class="fas fa-angle-double-left"></b> poprzedni</button>
+          <button id="next">następny <b class="fas fa-angle-double-right"></b></button>
+        </div>
+
+      </div>
+
     </div>
   </div>
 
