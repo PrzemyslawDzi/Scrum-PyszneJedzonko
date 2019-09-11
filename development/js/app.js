@@ -96,3 +96,39 @@ btnAddPlan.addEventListener("click", function () {
 
     alert("Dodaj nowy plan - taka funkcja będzie, jak już będzie layout")
 });
+
+
+
+// ============== zamykanie alertu przepisy ==============
+let divWithAlerts = document.querySelector(".main-app-notifications");
+
+
+let btnCloseRec = document.querySelector(".main-app-btn-recipies");
+btnCloseRec.addEventListener("click", function () {
+    let alertRec = document.querySelector(".main-app-notification-recipies");
+
+    alertRec.parentElement.removeChild(alertRec);
+});
+
+
+
+
+// ============== zamykanie alertu plany ==============
+
+let btnClosePln = document.querySelector(".main-app-btn-plan");
+btnClosePln.addEventListener("click", function () {
+    let alertPln = document.querySelector(".main-app-notification-plan");
+
+    alertPln.parentElement.removeChild(alertPln);
+});
+
+
+
+// ============== zamykanie alertu welcome ==============
+
+let btnCloseWlc = document.querySelector(".main-app-btn-welcome");
+btnCloseWlc.addEventListener("click", function () {
+    let alertWlc = document.querySelector(".main-app-notification-welcome");
+
+    alertWlc.parentElement.removeChild(alertWlc);
+});
