@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Zaplanuj Jedzonko</title>
   <link href="https://fonts.googleapis.com/css?family=Charmonman:400,700&display=swap&subset=latin-ext" rel="stylesheet">
-  <link rel="stylesheet" href="scss/font_awesome/fontawesome.scss">
+  <link rel="stylesheet" href="css/font_awesome/fontawesome.css">
   <link rel="stylesheet" href="./css/main.css" />
 </head>
 <body class="main-app">
@@ -55,7 +55,7 @@
         wygląda na to że jesteś tutaj<br>
         pierwszy raz!
       </p>
-        <input type="text" class="main-app-input" placeholder="tutaj wpisz jak masz na imię">
+        <input id="name" type="text" class="main-app-input" placeholder="tutaj wpisz jak masz na imię">
         <button class="main-app-button" type="submit">
           Gotowe!
         </button>
@@ -63,6 +63,21 @@
           Podaj nam swoje imię, a my zorganizujemy<br>
           dla Ciebie naszą aplikację :)
         </p>
+      </div>
+      <div class="main-app-functions">
+        <div class="main-app-buttons">
+          <button class="main-app-add-recipe col-3">
+            <div class="far fa-plus-square"></div>
+            dodaj przepis
+          </button>
+          <button class="main-app-add-plan col-3">
+            <div class="far fa-plus-square"></div>
+            dodaj plan
+          </button>
+          <div class ="test col-9">
+<!--            teoretycznie miejsce na widżet z powiadomieniami -->
+          </div>
+        </div>
       </div>
     </div>
   </div>
