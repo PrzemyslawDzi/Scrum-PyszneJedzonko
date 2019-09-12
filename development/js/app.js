@@ -139,7 +139,6 @@ btnCloseWlc.addEventListener("click", function () {
 
 // ============== btn tabela prev ==============
 let btnPrev = document.querySelector("#prev");
-console.log(btnPrev);
 btnPrev.addEventListener("click", function () {
     alert("Nie ma czego zmieniac, bo nie ma zadnych planow")
 });
@@ -150,3 +149,20 @@ let btnNext = document.querySelector("#next");
 btnNext.addEventListener("click", function () {
     alert("Coś potrzeba???")
 });
+
+
+//==============creating new plan ===========================
+
+let wholeRecipe =localStorage.getItem('recipes');
+let recipeName = JSON.parse(wholeRecipe);
+
+let allSelectorsForDishes = document.querySelectorAll('.addAllDishes');
+    allSelectorsForDishes.forEach(function (value) {
+        for (let i = 0; i <recipeName.length ; i++) {
+            let nameOfDish = recipeName[i].title;
+            let newOption = document.createElement("option");
+            newOption.innerText = nameOfDish;
+
+            value.appendChild(newOption);
+        }
+    });
