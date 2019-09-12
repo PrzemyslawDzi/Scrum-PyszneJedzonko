@@ -161,8 +161,87 @@ let allSelectorsForDishes = document.querySelectorAll('.addAllDishes');
         for (let i = 0; i <recipeName.length ; i++) {
             let nameOfDish = recipeName[i].title;
             let newOption = document.createElement("option");
+            newOption.value = i+1;
             newOption.innerText = nameOfDish;
 
             value.appendChild(newOption);
+    }
+});
+document.addEventListener('DOMContentLoaded', function() {
+    let addNewPlanBtn = document.querySelector('#addNewPlan');
+    let nameOfPlan = document.querySelector('#nameOfPlan');
+    let descriptionOfPlan = document.querySelector('#descriptionOfPlan');
+    let numberOfWeek = document.querySelector('#numberofWeek');
+    let monday = document.querySelectorAll('.monday');
+    let tuesday = document.querySelectorAll('.tuesday');
+    let wednesday = document.querySelectorAll('.wednesday');
+    let thursday = document.querySelectorAll('.thursday');
+    let friday = document.querySelectorAll('.friday');
+    let saturday = document.querySelectorAll('.saturday');
+    let sunday = document.querySelectorAll('.sunday');
+
+
+    let newPlan = {
+        PlanName: '',
+        PlanDescription: '',
+        PlanWeekNumber: '',
+        firstDay: [],
+        secondDay: [],
+        thirdDay: [],
+        fourthDay: [],
+        fifthDay:[],
+        sixthDay:[],
+        seventhDay:[],
+    };
+
+    function saveaddPlanToLocalStorage(object){
+        let dataFromLocalStorage = [];
+        if(localStorage.Plan!=null){
+            dataFromLocalStorage = JSON.parse(localStorage.addPlan);
+            dataFromLocalStorage.push(object);
+            localStorage.setItem("addPlan", JSON.stringify(dataFromLocalStorage));
+        }else{
+            dataFromLocalStorage.push(object);
+            localStorage.setItem("addPlan", JSON.stringify(dataFromLocalStorage));
         }
-    });
+        alert("Plan zapisany do localStorage");
+    }
+
+
+    addNewPlanBtn.addEventListener('click', function () {
+        newPlan.PlanName = nameOfPlan.value;
+        newPlan.PlanDescription = descriptionOfPlan.value;
+        newPlan.PlanWeekNumber = numberOfWeek.value;
+        for (let i = 0; i <monday.length ; i++) {
+            newPlan.firstDay.push(monday[i].options[monday[i].selectedIndex].text)
+        }
+        for (let i = 0; i <tuesday.length ; i++) {
+            newPlan.secondDay.push(tuesday[i].options[tuesday[i].selectedIndex].text)
+        }
+        for (let i = 0; i <wednesday.length ; i++) {
+            newPlan.thirdDay.push(wednesday[i].options[wednesday[i].selectedIndex].text)
+        }
+        for (let i = 0; i <thursday.length ; i++) {
+            newPlan.fourthDay.push(thursday[i].options[thursday[i].selectedIndex].text)
+        }
+        for (let i = 0; i <friday.length ; i++) {
+            newPlan.fifthDay.push(friday[i].options[friday[i].selectedIndex].text)
+        }
+        for (let i = 0; i <saturday.length ; i++) {
+            newPlan.sixthDay.push(saturday[i].options[saturday[i].selectedIndex].text)
+        }
+        for (let i = 0; i <sunday.length ; i++) {
+            newPlan.seventhDay.push(sunday[i].options[sunday[i].selectedIndex].text)
+        }
+
+        saveaddPlanToLocalStorage(newPlan);
+        console.log(newPlan);
+    })
+
+
+});
+
+
+
+
+// newPlan.firstWeek =test.options[test.selectedIndex].text;
