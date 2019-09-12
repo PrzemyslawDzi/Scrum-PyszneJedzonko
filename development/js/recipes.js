@@ -51,7 +51,7 @@ if(localStorage.recipes!=null) {
         newTdName.innerText = dataFromLocalStorage[i].title;
 
         let newTdDescription = document.createElement("td");
-        newTdDescription.classList.add("col-10");
+        newTdDescription.classList.add("col-9");
         newTr.appendChild(newTdDescription);
         newTdDescription.classList.add("recipes-list-description");
         newTdDescription.innerText = dataFromLocalStorage[i].description;
