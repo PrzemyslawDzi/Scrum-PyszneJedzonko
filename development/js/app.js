@@ -87,8 +87,7 @@ if (!(localStorage.getItem("savedName"))) {
 
 let btnAddRecipe = document.querySelector(".main-app-add-recipe");
 btnAddRecipe.addEventListener("click", function () {
-
-    alert("Dodaj nowy przepis - taka funkcja będzie, jak już będzie layout")
+    window.location.assign("./recipes.html");
 });
 
 

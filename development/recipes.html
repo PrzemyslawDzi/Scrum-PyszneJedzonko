@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Testowe dodawanie nowego przepisu</title>
+    <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body>
+    <button class="addNewRecipe">Dodaj nowy przepis</button>
+    <div class="addNewRecipeForm">
+    <h2>Nowy przepis</h2>
+    <button class="saveAndCloseButton">Zapisz i zamknij</button>
+    <br>
+    <label>
+        Nazwa przepisu
+        <input class="recipeName" type="text" name="recipeName">
+    </label>
+    <br>
+    <label>
+        Opis przepisu
+        <textarea class="recipeDescription" name="recipeDescription"></textarea>
+    </label>
+    <br>
+    <h3>Instrukcje</h3>
+    <label>
+        <button class="addInstruction">Add instruction</button>
+        <textarea class="recipeInstruction" name="recipeInstruction"></textarea>
+    </label>
+    <br>
+    <ol class="instructions">
+
+    </ol>
+    <h3>Składniki</h3>
+    <label>
+        <button class="addIngredient">Add ingredient</button>
+        <textarea class="recipeIngredient" name="recipeIngredient"></textarea>
+    </label>
+    <br>
+    <ul class="ingredients">
+
+    </ul>
+    </div>
+    <script src="./js/recipes.js"></script>
+</body>
+</html>
