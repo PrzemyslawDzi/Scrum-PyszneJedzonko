@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formularz dodawania nowego przepisu</title>
+    <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body class="main-app">
+
+<!--nagłowek-->
+<header class="main-app-header row">
+    <div class="main-app-header-container col-9">
+        <h1 class="main-app-title">
+            <a href="index.html">
+                Zaplanuj<span> Jedzonko</span>
+            </a>
+        </h1>
+    </div>
+    <div class="main-app-name col-9">
+        <p class="main-app-input-name">
+            Imię
+        </p>
+        <div class="fa fa-user-circle">
+        </div>
+    </div>
+</header>
+<div class="main-app-content row">
+
+    <!--nawigacja po lewej stronie-->
+    <nav class="main-app-menu col-3">
+        <ul>
+            <li>
+                <a href="app.html">
+                    Pulpit
+                </a>
+            </li>
+            <li>
+                <a href="recipes.html">
+                    Przepisy
+                </a>
+            </li>
+            <li>
+                <a href="schedules.html">
+                    Plany
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!--lista przepisow-->
+    <div class="main-app-dashboard col-15">
+        <div class="main-app-recipe-screen">
+            <div class="recipes-list-title row">
+                <h3>
+                    Lista planów
+                </h3>
+                <button class="addNewRecipeButton"></button>
+            </div>
+            <table class="recipes-list col-17">
+                <thead>
+                <tr>
+                    <th class="col-1">
+                        id
+                    </th>
+                    <th class="col-3">
+                        nazwa
+                    </th>
+                    <th class="col-9">
+                        opis
+                    </th>
+                    <th class="col-2">
+                        tydzień
+                    </th>
+                    <th class="col-2">
+                        akcje
+                    </th>
+                </tr>
+                </thead>
+            </table>
+            <table class="col-17">
+                <tbody class="recipes-list-main-table">
+                </tbody>
+            </table>
+            <button class="edit"></button>
+            <button class="delete"></button>
+        </div>
+    </div>
+</div>
+<script src="./js/schedules.js"></script>
+
+</body>
+</html>
