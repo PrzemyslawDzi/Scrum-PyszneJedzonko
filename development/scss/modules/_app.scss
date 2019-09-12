@@ -6,7 +6,7 @@
 
 
 .main-app-header {
-  background: #4a4a49;
+  background: $colorHeader;
   height: 80px;
   width: 100%;
 }
@@ -25,14 +25,12 @@
   font-family: 'Charmonman', cursive;
   font-size: 30px;
   font-weight: 200;
-
   a {
     text-decoration: none;
-    color: #ffffff;
+    color: $colorLogo1;
   }
-
   span {
-    color:#E58A20;
+    color:$colorLogo2;
   }
 }
 
@@ -41,13 +39,12 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  color: #ffffff;
+  color: $colorLogo1;
   font-size: 22px;
   padding-right: 50px;
-
   .fa-user-circle {
     font-size: 30px;
-    color: #E58A20;
+    color: $colorLogo2;
     display: block;
     padding-left: 30px;
   }
@@ -61,14 +58,12 @@
 
 .main-app-menu {
   height: calc(100vh - 80px);
-  background: #5B605F;
-
+  background: $colorNav;
   li {
     align-items: center;
     height: 73px;
     display: flex;
     position: relative;
-
     a {
       text-decoration: none;
       color: #ffffff;
@@ -79,9 +74,7 @@
       padding: 20px;
     }
   }
-
   li.visible {
-
     &:after {
       content: "";
       display: block;
@@ -91,7 +84,6 @@
       position: absolute;
       left: 0;
     }
-
     &:before {
       content: "";
       display: block;
@@ -104,7 +96,6 @@
       top: 50%;
       transform: translate(0, -50%) rotate(-45deg);
     }
-
     a {
       font-weight: 500;
     }
@@ -112,7 +103,7 @@
 }
 
 .main-app-dashboard {
-  margin: 30px 55px;
+  margin: 28px 55px;
 }
 
 .main-app-welcome-screen {
@@ -125,25 +116,21 @@
   padding: 50px;
   box-sizing: border-box;
   height: 100%;
-
   p {
     text-align: center;
     font-size: 24px;
     padding: 30px;
     line-height: 1.2;
-
     span {
       display: block;
       font-size: 36px;
       font-weight: 500;
     }
   }
-
   p:last-child {
     font-size: 20px;
   }
 }
-
 
 
 .main-app-button {
@@ -157,7 +144,6 @@
   margin-top: 20px;
   cursor: pointer;
   outline: none;
-
   &:focus {
     box-shadow: 0 0 15px 2px $colorNav;
     -moz-box-shadow: 0 0 15px 2px $colorNav;
@@ -172,7 +158,6 @@
   border: 1px solid $colorTablets;
   font-size: 16px;
   outline: none;
-
   &:focus {
     box-shadow: 0 0 15px 2px $colorNav;
     -moz-box-shadow: 0 0 15px 2px $colorNav;
@@ -206,7 +191,6 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-
   .fa-plus-square {
     font-family: "Font Awesome 5 Free", sans-serif;
     font-size: 90px;
@@ -214,11 +198,14 @@
   }
 }
 
+
 .main-app-notifications {
   display: flex;
   flex-direction: column;
-
-
+  p {
+    display: block;
+    width: 85%;
+  }
   button {
     border: none;
     background: $colorBackgroundDashboard;
@@ -227,6 +214,7 @@
     position: absolute;
     right: 0;
     top: 5px;
+    margin: 5px;
   }
 }
 
@@ -242,12 +230,10 @@
   align-items: center;
   position: relative;
   margin-bottom: 10px;
-
   b {
     font-size: 1.7em;
     padding: 0 7px;
   }
-
   span {
     padding: 0 7px;
   }
@@ -257,7 +243,6 @@
 .main-app-notification-recipies {
   border: 1px dashed $colorInfo;
   color: $colorInfo;
-
   button{
     color: $colorInfo;
   }
@@ -267,7 +252,6 @@
 .main-app-notification-plan {
   border: 1px dashed $colorWarning;
   color: $colorWarning;
-
   button{
     color: $colorWarning;
   }
@@ -277,7 +261,6 @@
 .main-app-notification-welcome {
   border: 1px dashed $colorSuccess;
   color: $colorSuccess;
-
   button{
     color: $colorSuccess;
   }
@@ -285,19 +268,20 @@
 
 
 div.main-app-table {
-  margin: 30px 0;
+  margin-top: 30px;
   background: $colorBackgroundDashboard;
   border: 1px dashed $colorTablets;
   justify-content: space-between;
   padding: 0 30px;
-
 }
+
 
 table.main-app-table {
   height: 100%;
   margin-bottom: 10px;
   color: $colorHeader;
 }
+
 
 #table-header {
   color: $colorLogo2;
@@ -306,7 +290,6 @@ table.main-app-table {
   padding: 20px 0;
   border-bottom: 1px solid $colorTablets;
 }
-
 
 
 .main-app-table-days {
@@ -318,7 +301,6 @@ table.main-app-table {
   th {
     padding-left: 30px;
   }
-
 }
 
 .main-app-table-plan {
@@ -329,17 +311,16 @@ table.main-app-table {
       padding-left: 30px;
     }
   }
-
   tr:last-child {
     border-bottom: none;
   }
 }
 
+
 .main-app-table-buttons {
   display: flex;
   justify-content: space-between;
   padding-bottom: 10px;
-
   button {
     border: none;
     color: $colorLogo2;
