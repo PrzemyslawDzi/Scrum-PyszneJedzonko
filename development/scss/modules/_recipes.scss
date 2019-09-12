@@ -1,0 +1,101 @@
+.main-app-recipe-screen {
+  background: $colorBackgroundDashboard;
+  border: 1px dashed $colorTablets;
+  flex-direction: column;
+  align-items: center;
+  color: $colorHeader;
+  padding: 25px;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+}
+
+.recipes-list-title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid $colorTablets;
+  padding-bottom: 5px;
+  position: relative;
+  margin-bottom: 15px;
+  width: 100%;
+  h3 {
+    text-transform: uppercase;
+    color: $colorLogo2;
+    font-size: 22px;
+    font-weight: 600;
+  }
+
+  button {
+    border: none;
+    background: transparent;
+    color: $colorSuccess;
+    font-size: 30px;
+    position: absolute;
+    right: 0;
+    top: -12px;
+    cursor: pointer;
+  }
+}
+
+.recipes-list {
+
+  th {
+    text-transform: uppercase;
+    color: $colorHeader;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 10px;
+    border-top: 1px solid $colorTablets;
+    border-bottom: 1px solid $colorTablets;
+    text-align: left;
+  }
+
+}
+
+tbody {
+  display: block;
+  overflow: auto;
+  -webkit-overflow-scrolling: auto;
+  max-height: 500px;
+
+
+}
+
+
+.recipes-list-main-table {
+  tr{
+
+    width: 100%;
+    line-height: 2em;
+    border-bottom: 1px solid $colorTablets;
+    color: $colorTablets;
+    font-size: 18px;
+
+    td {
+      line-height: 2em;
+      padding: 0 10px;
+    }
+  }
+
+}
+
+.recipes-list-description {
+  font-size: 14px;
+}
+
+.delete,
+.edit {
+  font-size: 16px;
+  border: none;
+  background: transparent;
+  display: none;
+  cursor: pointer;
+}
+
+.delete{
+  color: $colorBasket
+}
+
+.edit {
+  color: $colorLogo2
+}
