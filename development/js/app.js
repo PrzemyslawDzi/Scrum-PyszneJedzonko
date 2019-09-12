@@ -102,10 +102,19 @@ btnAddPlan.addEventListener("click", function () {
 
 
 
-// ============== zamykanie alertu przepisy ==============
-let divWithAlerts = document.querySelector(".main-app-notifications");
+// ==============  alert przepisy ==============
 
+// zliczanie liczby przepisow
+if(localStorage.recipes!=null) {
+    let dataFromLocalStorage=[];
+    dataFromLocalStorage = JSON.parse(localStorage.recipes);
 
+    let numberOfRecipes = document.querySelector("#numberOfRecipes");
+
+    numberOfRecipes.innerText = dataFromLocalStorage.length;
+}
+
+// zamykanie okna przepisw
 let btnCloseRec = document.querySelector(".main-app-btn-recipies");
 btnCloseRec.addEventListener("click", function () {
     let alertRec = document.querySelector(".main-app-notification-recipies");
@@ -139,7 +148,6 @@ btnCloseWlc.addEventListener("click", function () {
 
 // ============== btn tabela prev ==============
 let btnPrev = document.querySelector("#prev");
-console.log(btnPrev);
 btnPrev.addEventListener("click", function () {
     alert("Nie ma czego zmieniac, bo nie ma zadnych planow")
 });
