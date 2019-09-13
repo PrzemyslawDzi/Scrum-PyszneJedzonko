@@ -78,10 +78,9 @@ if(localStorage.recipes!=null) {
         });
 
         btnDelete.addEventListener("click", function () {
-            console.log(dataFromLocalStorage[i]);
             dataFromLocalStorage.splice(i, 1); 
-            console.log(dataFromLocalStorage);
             localStorage.setItem("recipes", JSON.stringify(dataFromLocalStorage));
+            alert("Sukces! Przepis usunięto!");
             location.reload();
         });
     }
