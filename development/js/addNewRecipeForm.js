@@ -48,22 +48,25 @@ document.addEventListener('DOMContentLoaded', function() {
     };
  
     function editItem(){
-        let newBr = document.createElement("br");
-        this.parentElement.appendChild(newBr);
+        let newDiv = document.createElement("div");
+        newDiv.style.width = "100%";
+        this.parentElement.appendChild(newDiv);
         let newEditTextarea = document.createElement("textarea");
         newEditTextarea.value = this.parentElement.firstElementChild.innerText;
-        this.parentElement.appendChild(newEditTextarea);
+        this.parentElement.lastElementChild.appendChild(newEditTextarea);
         let newEditSaveChangesButton = document.createElement("button");
         newEditSaveChangesButton.classList.add("saveChangesButton");
-        this.parentElement.appendChild(newEditSaveChangesButton);
+        this.parentElement.lastElementChild.appendChild(newEditSaveChangesButton);
         newEditSaveChangesButton.addEventListener("click", saveChanges);
     };
 
     function saveChanges(){
-        this.parentElement.firstElementChild.innerText =  this.parentElement.children[4].value;
-        this.parentElement.removeChild(this.parentElement.children[3]);
-        this.parentElement.removeChild(this.parentElement.children[3]);
-        this.parentElement.removeChild(this);
+        if(this.parentElement.firstElementChild.value==""){
+            alert("Błąd! Pole edycji jest puste!");
+        }else{
+        this.parentElement.parentElement.firstElementChild.innerText =  this.parentElement.firstElementChild.value;
+        this.parentElement.parentElement.removeChild(this.parentElement.parentElement.lastElementChild);
+        }
     }
 
     function deleteItem(){
@@ -71,6 +74,9 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     addIngredientButton.addEventListener("click", function(){
+        if(textareaRecipeIngredient.value==""){
+            alert("Nie wpisano składnika!");
+        }else{
         let newLi = document.createElement("li");
         let newP = document.createElement("p");
         newP.innerText = textareaRecipeIngredient.value;
@@ -85,9 +91,13 @@ document.addEventListener('DOMContentLoaded', function() {
         newEditButton.addEventListener("click", editItem);
         newDeleteButton.addEventListener("click", deleteItem);
         textareaRecipeIngredient.value = "";
+        }
     });
 
     addInstructionButton.addEventListener("click", function(){
+        if(textareaRecipeInstruction.value==""){
+            alert("Nie wpisano instrukcji!");
+        }else{
         let newLi = document.createElement("li");
         let newP = document.createElement("p");
         newP.innerText = textareaRecipeInstruction.value;
@@ -102,6 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
         newEditButton.addEventListener("click", editItem);
         newDeleteButton.addEventListener("click", deleteItem);
         textareaRecipeInstruction.value = "";
+        }
     });
 
     function saveRecipeToLocalStorage(object){
@@ -119,6 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     saveAndCloseButton.addEventListener("click", function(){
         console.log("zapisuje i zamykam no");
+        console.log(instructionsList.children.length);
         newRecipe.title = recipeName.value;
         newRecipe.description = recipeDescription.value;
         for(let i=0; i<instructionsList.children.length; i++){
@@ -127,8 +139,23 @@ document.addEventListener('DOMContentLoaded', function() {
         for(let i=0; i<ingredientsList.children.length; i++){
             newRecipe.ingredients.push(ingredientsList.children[i].firstElementChild.innerText);
         };
+        if((recipeName.value=="")||(recipeDescription.value=="")||(instructionsList.children.length==0)||(ingredientsList.children.length==0)){
+            if(recipeName.value==""){
+                alert("Pole nazwa przepisu jest puste!");
+            };
+            if(recipeDescription.value==""){
+                alert("Pole opis przepisu jest puste!");
+            };
+            if(instructionsList.children.length==0){
+                alert("Nie dodano żadnych instrukcji!");
+            };
+            if(ingredientsList.children.length==0){
+                alert("Nie dodano żadnych składników!");
+            };
+        }else{
         saveRecipeToLocalStorage(newRecipe);
         window.location.assign("./recipes.html");
+        }
     });
 
 });
