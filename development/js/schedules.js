@@ -23,61 +23,62 @@ name.innerText = localStorage.getItem("savedName");
 
 // ================= wczytywanie planow z local storage
 
-// TO KOPIA Z RECIPES
-// if(localStorage.recipes!=null) {  // zmienic recipies na klucz Przemka
-//     dataFromLocalStorage = JSON.parse(localStorage.recipes); // tak samo
-//
-//     for (let i = 0; i < dataFromLocalStorage.length; i++) {
-//
-//         let newTr = document.createElement("tr");
-//         let mainTable = document.querySelector(".recipes-list-main-table");
-//         mainTable.appendChild(newTr);
-//
-//         let newTdId = document.createElement("td");
-//         newTdId.classList.add("col-1");
-//         newTr.appendChild(newTdId);
-//         newTdId.innerText = dataFromLocalStorage.indexOf(dataFromLocalStorage[i])+1; // poprawic
-//
-//         let newTdName = document.createElement("td");
-//         newTdName.classList.add("col-3");
-//         newTr.appendChild(newTdName);
-//         newTdName.innerText = dataFromLocalStorage[i].title;
-//
-//         let newTdDescription = document.createElement("td");
-//         newTdDescription.classList.add("col-9");
-//         newTr.appendChild(newTdDescription);
-//         newTdDescription.classList.add("recipes-list-description");
-//         newTdDescription.innerText = dataFromLocalStorage[i].description;
-//
-//         let newTdWeek = document.createElement("td");
-//         newTdName.classList.add("col-3");
-//         newTr.appendChild(newTdWeek);
-//         newTdName.innerText = dataFromLocalStorage[i].title;
-//
-//
-//         let newTdAction = document.createElement("td");
-//         newTdAction.classList.add("col-2");
-//         newTr.appendChild(newTdAction);
-//
-//         let toCloneEdit = document.querySelector(".edit");
-//         let toCloneDelete = document.querySelector(".delete");
-//
-//         let btnEdit = toCloneEdit.cloneNode(true);
-//         let btnDelete = toCloneDelete.cloneNode(true);
-//
-//         btnEdit.style.display = "inline-block";
-//         btnDelete.style.display = "inline-block";
-//
-//         newTdAction.appendChild(btnEdit);
-//         newTdAction.appendChild(btnDelete);
-//
-//         btnEdit.addEventListener("click", function () {
-//             alert("Edycja planow pojawi się wkrotce")
-//         });
-//
-//         btnDelete.addEventListener("click", function () {
-//             newTr.parentElement.removeChild(newTr);
-//             alert("Ogolnie usuwa wpis, ale tylko z html a nie local storage i trzeba jeszcze poprawic")
-//         });
-//     }
-// }
+if(localStorage.addPlan!=null) {
+    dataFromLocalStorage = JSON.parse(localStorage.addPlan);
+
+    for (let i = 0; i < dataFromLocalStorage.length; i++) {
+
+        let newTrSche = document.createElement("tr");
+        let mainTableSche = document.querySelector(".plan-list-main-table");
+        mainTableSche.appendChild(newTrSche);
+        console.log(mainTableSche);
+
+        let newTdIdSche = document.createElement("td");
+        newTdIdSche.classList.add("sche-list-id");
+        newTrSche.appendChild(newTdIdSche);
+        newTdIdSche.innerText = dataFromLocalStorage.indexOf(dataFromLocalStorage[i])+1;
+
+        let newTdNameSche = document.createElement("td");
+        newTdNameSche.classList.add("sche-list-name");
+        newTrSche.appendChild(newTdNameSche);
+        newTdNameSche.innerText = dataFromLocalStorage[i].PlanName;
+
+        let newTdDescriptionSche = document.createElement("td");
+        newTdDescriptionSche.classList.add("sche-list-description");
+        newTrSche.appendChild(newTdDescriptionSche);
+        newTdDescriptionSche.innerText = dataFromLocalStorage[i].PlanDescription;
+
+
+        let newTdWeekSche = document.createElement("td");
+        newTdWeekSche.classList.add("sche-list-week");
+        newTrSche.appendChild(newTdWeekSche);
+        newTdWeekSche.innerText = dataFromLocalStorage[i].PlanWeekNumber;
+
+
+        let newTdActionSche = document.createElement("td");
+        newTdActionSche.classList.add("sche-list-action");
+        newTrSche.appendChild(newTdActionSche);
+
+        let toCloneEdit = document.querySelector(".edit");
+        let toCloneDelete = document.querySelector(".delete");
+
+        let btnEdit = toCloneEdit.cloneNode(true);
+        let btnDelete = toCloneDelete.cloneNode(true);
+
+        btnEdit.style.display = "inline-block";
+        btnEdit.zIndex = -100;
+        btnDelete.style.display = "inline-block";
+        btnDelete.zIndex = -100;
+
+        newTdActionSche.appendChild(btnEdit);
+        newTdActionSche.appendChild(btnDelete);
+
+        btnEdit.addEventListener("click", function () {
+            alert("Edycja przepisow pojawi się wkrotce")
+        });
+
+        btnDelete.addEventListener("click", function () {
+            alert("Hejka!")
+        });
+    }
+}

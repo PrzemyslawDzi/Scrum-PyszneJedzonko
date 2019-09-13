@@ -1,0 +1,102 @@
+.plan-list-title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid $colorTablets;
+  padding-bottom: 5px;
+  position: relative;
+  margin-bottom: 15px;
+  width: 100%;
+  h3 {
+    text-transform: uppercase;
+    color: $colorLogo2;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  button {
+    border: none;
+    background: url("../../images/image-4.png");
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: -5px;
+    cursor: pointer;
+  }
+}
+
+.plan-list-names {
+  width: 98%;
+  display: flex;
+  z-index: 100;
+}
+
+.plan-list {
+  width: 100%;
+  th {
+    text-transform: uppercase;
+    color: $colorHeader;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 10px;
+    border-top: 1px solid $colorTablets;
+    border-bottom: 1px solid $colorTablets;
+    text-align: left;
+  }
+}
+
+.sche-list-id {
+  width: 10%;
+}
+
+.sche-list-name {
+  width: 20%;
+}
+
+.sche-list-description {
+  width: 45%;
+}
+
+.sche-list-week {
+  width: 10px;
+}
+
+.sche-list-action {
+  width: 15%;
+}
+
+.plan-list-content {
+  width: 98%;
+  height: 100%;
+  display: flex;
+  overflow: auto;
+  -webkit-overflow-scrolling: auto;
+  max-height: 540px;
+  @media (min-width: 1600px) {
+    max-height: 700px;
+  }
+
+
+}
+
+.plan-list-body {
+  width: 100%;
+}
+.plan-list-body {
+  tr {
+
+    border-bottom: 1px solid $colorTablets;
+    color: $colorTablets;
+    font-size: 18px;
+    td {
+      line-height: 2em;
+      padding: 0 10px;
+    }
+  }
+
+}
+
+
+
+.sche-list-description {
+  font-size: 14px;
+}
