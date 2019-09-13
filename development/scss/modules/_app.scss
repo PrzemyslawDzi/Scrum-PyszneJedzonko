@@ -180,10 +180,10 @@
 
 .main-app-add-plan,
 .main-app-add-recipe {
-  background: $colorBackgroundDashboard;
-  color: $colorSuccess;
   height: 190px;
+  width: 213px;
   border: dashed 1px $colorSuccess;
+  background-position: center;
   font-size: 24px;
   letter-spacing: 1px;
   display: flex;
@@ -196,6 +196,15 @@
     font-size: 90px;
     padding-bottom: 20px;
   }
+}
+
+
+.main-app-add-plan {
+  background-image: url("../../images/dodaj_plan.png");
+}
+
+.main-app-add-recipe {
+  background-image: url("../../images/dodaj_przepis.png");
 }
 
 
