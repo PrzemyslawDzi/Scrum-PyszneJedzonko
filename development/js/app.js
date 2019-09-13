@@ -164,86 +164,170 @@ btnNext.addEventListener("click", function () {
 
 if(localStorage.addPlan!=null) {
     dataFromLocalStorage = JSON.parse(localStorage.addPlan);
-
-    
-
-
-    for (let i = 0; i < dataFromLocalStorage.length; i++) {
-
-        let numberOfWeek = document.querySelector("#number-of-week");
-        numberOfWeek.innerText = dataFromLocalStorage[i].PlanWeekNumber;
-
-        let table = document.querySelector(".main-app-table-plan");
-
-        let monday = table.querySelectorAll("td:first-child");
-        let tableMonday = [];
-        monday.forEach(function (oneMeal) {
-            tableMonday.push(oneMeal);
-        });
-        for (let j = 0; j < tableMonday.length; j++) {
-            tableMonday[j].innerText = dataFromLocalStorage[i].firstDay[j]
-        }
+    console.log(dataFromLocalStorage);
 
 
-        let tuesday = table.querySelectorAll("td:nth-child(2)");
-        let tableTuesday = [];
-        tuesday.forEach(function (oneMeal) {
-            tableTuesday.push(oneMeal);
-        });
-        for (let j = 0; j < tableTuesday.length; j++) {
-            tableTuesday[j].innerText = dataFromLocalStorage[i].secondDay[j]
-        }
-
-
-        let wednesday = table.querySelectorAll("td:nth-child(3)");
-        let tableWednesday = [];
-        wednesday.forEach(function (oneMeal) {
-            tableWednesday.push(oneMeal);
-        });
-        for (let j = 0; j < tableWednesday.length; j++) {
-            tableWednesday[j].innerText = dataFromLocalStorage[i].thirdDay[j]
-        }
-
-        let thursday = table.querySelectorAll("td:nth-child(4)");
-        let tableThursday = [];
-        thursday.forEach(function (oneMeal) {
-            tableThursday.push(oneMeal);
-        });
-        for (let j = 0; j < tableThursday.length; j++) {
-            tableThursday[j].innerText = dataFromLocalStorage[i].fourthDay[j]
-        }
-
-        let friday = table.querySelectorAll("td:nth-child(5)");
-        let tableFriday = [];
-        friday.forEach(function (oneMeal) {
-            tableFriday.push(oneMeal);
-        });
-        for (let j = 0; j < tableFriday.length; j++) {
-            tableFriday[j].innerText = dataFromLocalStorage[i].fifthDay[j]
-        }
-
-
-        let saturday = table.querySelectorAll("td:nth-child(6)");
-        let tableSaturday = [];
-        saturday.forEach(function (oneMeal) {
-            tableSaturday.push(oneMeal);
-        });
-        for (let j = 0; j < tableSaturday.length; j++) {
-            tableSaturday[j].innerText = dataFromLocalStorage[i].sixthDay[j]
-        }
-
-
-        let sunday = table.querySelectorAll("td:nth-child(7)");
-        let tableSunday = [];
-        sunday.forEach(function (oneMeal) {
-            tableSunday.push(oneMeal);
-        });
-        for (let j = 0; j < tableSunday.length; j++) {
-            tableSunday[j].innerText = dataFromLocalStorage[i].seventhDay[j]
-        }
-
+    function getNumberOfWeek() {
+        const today = new Date();
+        const firstDayOfYear = new Date(today.getFullYear(), 0, 1);
+        const pastDaysOfYear = (today - firstDayOfYear) / 86400000;
+        return Math.ceil((pastDaysOfYear + firstDayOfYear.getDay() + 1) / 7);
     }
 
+    console.log(getNumberOfWeek());
+
+    for (let i = 0; i < dataFromLocalStorage.length; i++) {
+        let actualWeek = getNumberOfWeek();
+
+        if (dataFromLocalStorage[i].PlanWeekNumber == actualWeek) {
+
+            let numberOfWeek = document.querySelector("#number-of-week");
+            numberOfWeek.innerText = dataFromLocalStorage[i].PlanWeekNumber;
+
+            let table = document.querySelector(".main-app-table-plan");
+
+            let monday = table.querySelectorAll("td:first-child");
+            let tableMonday = [];
+            monday.forEach(function (oneMeal) {
+                tableMonday.push(oneMeal);
+            });
+            for (let j = 0; j < tableMonday.length; j++) {
+                tableMonday[j].innerText = dataFromLocalStorage[i].firstDay[j]
+            }
+
+
+            let tuesday = table.querySelectorAll("td:nth-child(2)");
+            let tableTuesday = [];
+            tuesday.forEach(function (oneMeal) {
+                tableTuesday.push(oneMeal);
+            });
+            for (let j = 0; j < tableTuesday.length; j++) {
+                tableTuesday[j].innerText = dataFromLocalStorage[i].secondDay[j]
+            }
+
+
+            let wednesday = table.querySelectorAll("td:nth-child(3)");
+            let tableWednesday = [];
+            wednesday.forEach(function (oneMeal) {
+                tableWednesday.push(oneMeal);
+            });
+            for (let j = 0; j < tableWednesday.length; j++) {
+                tableWednesday[j].innerText = dataFromLocalStorage[i].thirdDay[j]
+            }
+
+            let thursday = table.querySelectorAll("td:nth-child(4)");
+            let tableThursday = [];
+            thursday.forEach(function (oneMeal) {
+                tableThursday.push(oneMeal);
+            });
+            for (let j = 0; j < tableThursday.length; j++) {
+                tableThursday[j].innerText = dataFromLocalStorage[i].fourthDay[j]
+            }
+
+            let friday = table.querySelectorAll("td:nth-child(5)");
+            let tableFriday = [];
+            friday.forEach(function (oneMeal) {
+                tableFriday.push(oneMeal);
+            });
+            for (let j = 0; j < tableFriday.length; j++) {
+                tableFriday[j].innerText = dataFromLocalStorage[i].fifthDay[j]
+            }
+
+
+            let saturday = table.querySelectorAll("td:nth-child(6)");
+            let tableSaturday = [];
+            saturday.forEach(function (oneMeal) {
+                tableSaturday.push(oneMeal);
+            });
+            for (let j = 0; j < tableSaturday.length; j++) {
+                tableSaturday[j].innerText = dataFromLocalStorage[i].sixthDay[j]
+            }
+
+
+            let sunday = table.querySelectorAll("td:nth-child(7)");
+            let tableSunday = [];
+            sunday.forEach(function (oneMeal) {
+                tableSunday.push(oneMeal);
+            });
+            for (let j = 0; j < tableSunday.length; j++) {
+                tableSunday[j].innerText = dataFromLocalStorage[i].seventhDay[j]
+            }
+            break
+        } else {
+
+            let numberOfWeek = document.querySelector("#number-of-week");
+            numberOfWeek.innerText = dataFromLocalStorage[i].PlanWeekNumber;
+
+            let table = document.querySelector(".main-app-table-plan");
+
+            let monday = table.querySelectorAll("td:first-child");
+            let tableMonday = [];
+            monday.forEach(function (oneMeal) {
+                tableMonday.push(oneMeal);
+            });
+            for (let j = 0; j < tableMonday.length; j++) {
+                tableMonday[j].innerText = dataFromLocalStorage[i].firstDay[j]
+            }
+
+
+            let tuesday = table.querySelectorAll("td:nth-child(2)");
+            let tableTuesday = [];
+            tuesday.forEach(function (oneMeal) {
+                tableTuesday.push(oneMeal);
+            });
+            for (let j = 0; j < tableTuesday.length; j++) {
+                tableTuesday[j].innerText = dataFromLocalStorage[i].secondDay[j]
+            }
+
+
+            let wednesday = table.querySelectorAll("td:nth-child(3)");
+            let tableWednesday = [];
+            wednesday.forEach(function (oneMeal) {
+                tableWednesday.push(oneMeal);
+            });
+            for (let j = 0; j < tableWednesday.length; j++) {
+                tableWednesday[j].innerText = dataFromLocalStorage[i].thirdDay[j]
+            }
+
+            let thursday = table.querySelectorAll("td:nth-child(4)");
+            let tableThursday = [];
+            thursday.forEach(function (oneMeal) {
+                tableThursday.push(oneMeal);
+            });
+            for (let j = 0; j < tableThursday.length; j++) {
+                tableThursday[j].innerText = dataFromLocalStorage[i].fourthDay[j]
+            }
+
+            let friday = table.querySelectorAll("td:nth-child(5)");
+            let tableFriday = [];
+            friday.forEach(function (oneMeal) {
+                tableFriday.push(oneMeal);
+            });
+            for (let j = 0; j < tableFriday.length; j++) {
+                tableFriday[j].innerText = dataFromLocalStorage[i].fifthDay[j]
+            }
+
+
+            let saturday = table.querySelectorAll("td:nth-child(6)");
+            let tableSaturday = [];
+            saturday.forEach(function (oneMeal) {
+                tableSaturday.push(oneMeal);
+            });
+            for (let j = 0; j < tableSaturday.length; j++) {
+                tableSaturday[j].innerText = dataFromLocalStorage[i].sixthDay[j]
+            }
+
+
+            let sunday = table.querySelectorAll("td:nth-child(7)");
+            let tableSunday = [];
+            sunday.forEach(function (oneMeal) {
+                tableSunday.push(oneMeal);
+            });
+            for (let j = 0; j < tableSunday.length; j++) {
+                tableSunday[j].innerText = dataFromLocalStorage[i].seventhDay[j]
+            }
+        }
+    }
 
 }
 
