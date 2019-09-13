@@ -53,37 +53,42 @@
     <!--lista przepisow-->
     <div class="main-app-dashboard col-15">
         <div class="main-app-recipe-screen">
-            <div class="recipes-list-title row">
+            <div class="plan-list-title">
                 <h3>
                     Lista planów
                 </h3>
-                <button class="addNewRecipeButton"></button>
+                <button class="addNewPlanButton"></button>
             </div>
-            <table class="recipes-list col-17">
-                <thead>
-                <tr>
-                    <th class="col-1">
-                        id
-                    </th>
-                    <th class="col-3">
-                        nazwa
-                    </th>
-                    <th class="col-9">
-                        opis
-                    </th>
-                    <th class="col-2">
-                        tydzień
-                    </th>
-                    <th class="col-2">
-                        akcje
-                    </th>
-                </tr>
-                </thead>
-            </table>
-            <table class="col-17">
-                <tbody class="recipes-list-main-table">
-                </tbody>
-            </table>
+            <div class="plan-list-names">
+                <table class="plan-list">
+                    <thead>
+                        <tr>
+                            <th class="sche-list-id">
+                                id
+                            </th>
+                            <th class="sche-list-name">
+                                nazwa
+                            </th>
+                            <th class="sche-list-description">
+                                opis
+                            </th>
+                            <th class="sche-list-week">
+                                tydzień
+                            </th>
+                            <th class="sche-list-action">
+                                akcje
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="plan-list-content">
+                <table class="plan-list-body">
+                    <tbody class="plan-list-main-table">
+                    </tbody>
+                </table>
+            </div>
+
             <button class="edit"></button>
             <button class="delete"></button>
         </div>
