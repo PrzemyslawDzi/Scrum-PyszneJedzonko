@@ -78,8 +78,11 @@ if(localStorage.recipes!=null) {
         });
 
         btnDelete.addEventListener("click", function () {
-            newTr.parentElement.removeChild(newTr);
-            alert("Ogolnie usuwa wpis, ale tylko z html a nie local storage")
+            console.log(dataFromLocalStorage[i]);
+            dataFromLocalStorage.splice(i, 1); 
+            console.log(dataFromLocalStorage);
+            localStorage.setItem("recipes", JSON.stringify(dataFromLocalStorage));
+            location.reload();
         });
     }
 }
