@@ -53,36 +53,55 @@
 <!--lista przepisow-->
         <div class="main-app-dashboard col-15">
             <div class="main-app-recipe-screen">
-                <div class="recipes-list-title row">
+                <div class="recipes-list-title">
                     <h3>
                         Lista przepisów
                     </h3>
                     <button class="addNewRecipeButton"></button>
                 </div>
-                <table class="recipes-list col-17">
-                    <thead>
-                    <tr>
-                        <th class="col-1">
-                            id
-                        </th>
-                        <th class="col-5">
-                            nazwa
-                        </th>
-                        <th class="col-10">
-                            opis
-                        </th>
-                        <th class="col-2">
-                            akcje
-                        </th>
-                    </tr>
-                    </thead>
-                </table>
-                <table class="col-17">
-                    <tbody class="recipes-list-main-table">
-                    </tbody>
-                </table>
-                <button class="edit"></button>
-                <button class="delete"></button>
+                <div class="recipes-list-names">
+                    <table class="recipes-list">
+                        <thead>
+                        <tr>
+                            <th class="recipes-list-id">
+                                id
+                            </th>
+                            <th class="recipes-list-name">
+                                nazwa
+                            </th>
+                            <th class="recipes-list-description">
+                                opis
+                            </th>
+                            <th class="recipes-list-action">
+                                akcje
+                            </th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="recipes-list-content">
+                    <table class="recipes-list-body">
+                        <tbody class="recipes-list-main-table">
+                            <td class="recipes-list-id">
+                                id
+                            </td>
+                            <td class="recipes-list-name">
+                                nazwa
+                            </td>
+                            <td class="recipes-list-description">
+                                opis
+                            </td>
+                            <td class="recipes-list-action">
+                                akcje
+                            </td>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <button class="edit"></button>
+                    <button class="delete"></button>
+                </div>
+
             </div>
         </div>
     </div>

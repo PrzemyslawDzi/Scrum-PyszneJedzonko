@@ -41,23 +41,22 @@ if(localStorage.recipes!=null) {
         mainTable.appendChild(newTr);
 
         let newTdId = document.createElement("td");
-        newTdId.classList.add("col-1");
+        newTdId.classList.add("recipes-list-id");
         newTr.appendChild(newTdId);
         newTdId.innerText = dataFromLocalStorage.indexOf(dataFromLocalStorage[i])+1;
 
         let newTdName = document.createElement("td");
-        newTdName.classList.add("col-5");
+        newTdName.classList.add("recipes-list-name");
         newTr.appendChild(newTdName);
         newTdName.innerText = dataFromLocalStorage[i].title;
 
         let newTdDescription = document.createElement("td");
-        newTdDescription.classList.add("col-9");
-        newTr.appendChild(newTdDescription);
         newTdDescription.classList.add("recipes-list-description");
+        newTr.appendChild(newTdDescription);
         newTdDescription.innerText = dataFromLocalStorage[i].description;
 
         let newTdAction = document.createElement("td");
-        newTdAction.classList.add("col-2");
+        newTdAction.classList.add("recipes-list-action");
         newTr.appendChild(newTdAction);
 
         let toCloneEdit = document.querySelector(".edit");
