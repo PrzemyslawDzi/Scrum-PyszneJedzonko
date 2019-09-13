@@ -4,42 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Formularz dodawania nowego przepisu</title>
+    <title>Zaplanuj Jedzonko</title>
+    <link href="https://fonts.googleapis.com/css?family=Charmonman:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/font_awesome/fontawesome.css">
     <link rel="stylesheet" href="./css/main.css"/>
 </head>
-<body>
-    <div class="addNewRecipeForm">
-    <h2>Nowy przepis</h2>
-    <button class="saveAndCloseButton">Zapisz i zamknij</button>
-    <br>
-    <label>
-        Nazwa przepisu
-        <input class="recipeName" type="text" name="recipeName">
-    </label>
-    <br>
-    <label>
-        Opis przepisu
-        <textarea class="recipeDescription" name="recipeDescription"></textarea>
-    </label>
-    <br>
-    <h3>Instrukcje</h3>
-    <label>
-        <button class="addInstruction">Add instruction</button>
-        <textarea class="recipeInstruction" name="recipeInstruction"></textarea>
-    </label>
-    <br>
-    <ol class="instructions">
-
-    </ol>
-    <h3>Składniki</h3>
-    <label>
-        <button class="addIngredient">Add ingredient</button>
-        <textarea class="recipeIngredient" name="recipeIngredient"></textarea>
-    </label>
-    <br>
-    <ul class="ingredients">
-
-    </ul>
+<body class="main-app">
+    <!--header do app.html-->
+    <header class="main-app-header row">
+        <div class="main-app-header-container col-9">
+            <h1 class="main-app-title">
+            <a href="index.html">
+                Zaplanuj<span> Jedzonko</span>
+            </a>
+            </h1>
+        </div>
+        <div class="main-app-name col-9">
+            <p class="main-app-input-name">
+            Imię
+            </p>
+            <div class="fa fa-user-circle">
+            </div>
+        </div>
+    </header>
+        
+    <div class="main-app-content row">     
+        <!--nawigacja po lewej stronie-->
+        <nav class="main-app-menu col-3">
+            <ul>
+            <li>
+                <a href="app.html">
+                Pulpit
+                </a>
+            </li>
+            <li>
+                <a href="recipes.html">
+                Przepisy
+                </a>
+                </li>
+            <li>
+                <a href="schedules.html">
+                Plany
+                </a>
+            </li>
+            </ul>
+        </nav>
+        <!-- formularz -->
+        <div class="main-app-dashboard col-15">
+            <div class="addNewRecipeForm">
+                <div class="addNewRecipeForm-title row">
+                    <h3>
+                        Nowy przepis
+                    </h3>
+                    <button class="saveAndCloseButton">Zapisz i zamknij</button>
+                </div>
+                <div class="addNewRecipeFormLine row">
+                    <div class="col-4"><p>Nazwa przepisu</p></div>
+                    <input class="recipeName col-14" type="text" name="recipeName">
+                </div>
+                <div class="addNewRecipeFormLine row">
+                    <div class="col-4"><p>Opis przepisu</p></div>
+                    <textarea class="recipeDescription col-14" name="recipeDescription"></textarea>
+                </div>
+                <div class="row addPropertiesMenu">
+                    <div class="col-8">
+                        <div class="row">
+                            <h3>Instrukcje</h3>
+                        </div>
+                        <div class="row">
+                                <textarea class="recipeInstruction" name="recipeInstruction"></textarea>
+                                <button class="addInstruction"></button>
+                        </div>
+                        <div class="row">
+                            <ol class="instructions">
+                        
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <div class="row">
+                            <h3>Składniki</h3>
+                        </div>
+                        <div class="row">
+                                <textarea class="recipeIngredient" name="recipeIngredient"></textarea>
+                                <button class="addIngredient"></button>
+                        </div>
+                        <div class="row">
+                            <ul class="ingredients">
+                        
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="./js/addNewRecipeForm.js"></script>
 </body>
