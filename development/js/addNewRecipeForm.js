@@ -1,3 +1,31 @@
+// ======================== nawigacja po lewej stronie =========================
+
+let allLi = document.querySelectorAll(".main-app-menu li");
+let arrayAllLi = [];
+
+allLi.forEach(function (oneLi) {
+    arrayAllLi.push(oneLi);
+});
+
+for (let i = 0; i < arrayAllLi.length; i++) {
+    arrayAllLi[i].addEventListener("mouseover", function () {
+        arrayAllLi[i].classList.add("visible");
+    });
+
+    arrayAllLi[i].addEventListener("mouseout", function () {
+        arrayAllLi[i].classList.remove("visible");
+    })
+}
+
+
+
+
+// ======== sprawdzenie czy imię jest w local storage, jeśli tak to podmiana imienia ========
+
+
+let name = document.querySelector(".main-app-input-name");
+name.innerText = localStorage.getItem("savedName");
+
 document.addEventListener('DOMContentLoaded', function() {
 
     let addIngredientButton = document.querySelector(".addIngredient");
@@ -26,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
         newEditTextarea.value = this.parentElement.firstElementChild.innerText;
         this.parentElement.appendChild(newEditTextarea);
         let newEditSaveChangesButton = document.createElement("button");
-        newEditSaveChangesButton.innerText = "Save changes";
+        newEditSaveChangesButton.classList.add("saveChangesButton");
         this.parentElement.appendChild(newEditSaveChangesButton);
         newEditSaveChangesButton.addEventListener("click", saveChanges);
     };
@@ -48,10 +76,10 @@ document.addEventListener('DOMContentLoaded', function() {
         newP.innerText = textareaRecipeIngredient.value;
         newLi.appendChild(newP);
         let newEditButton = document.createElement("button");
-        newEditButton.innerText = "Edit";
+        newEditButton.classList.add("superedit");
         newLi.appendChild(newEditButton);
         let newDeleteButton = document.createElement("button");
-        newDeleteButton.innerText = "Delete";
+        newDeleteButton.classList.add("superdelete");
         newLi.appendChild(newDeleteButton);
         ingredientsList.appendChild(newLi);
         newEditButton.addEventListener("click", editItem);
@@ -65,10 +93,10 @@ document.addEventListener('DOMContentLoaded', function() {
         newP.innerText = textareaRecipeInstruction.value;
         newLi.appendChild(newP);
         let newEditButton = document.createElement("button");
-        newEditButton.innerText = "Edit";
+        newEditButton.classList.add("superedit");
         newLi.appendChild(newEditButton);
         let newDeleteButton = document.createElement("button");
-        newDeleteButton.innerText = "Delete";
+        newDeleteButton.classList.add("superdelete");
         newLi.appendChild(newDeleteButton);
         instructionsList.appendChild(newLi);
         newEditButton.addEventListener("click", editItem);
