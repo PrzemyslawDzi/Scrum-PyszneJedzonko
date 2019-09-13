@@ -66,7 +66,9 @@ if(localStorage.recipes!=null) {
         let btnDelete = toCloneDelete.cloneNode(true);
 
         btnEdit.style.display = "inline-block";
+        btnEdit.zIndex = -100;
         btnDelete.style.display = "inline-block";
+        btnDelete.zIndex = -100;
 
         newTdAction.appendChild(btnEdit);
         newTdAction.appendChild(btnDelete);

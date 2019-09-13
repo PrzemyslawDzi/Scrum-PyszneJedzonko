@@ -41,6 +41,7 @@
 .recipes-list-names {
   width: 98%;
   display: flex;
+  z-index: 100;
 }
 
 .recipes-list {
@@ -75,26 +76,24 @@
 
 .recipes-list-content {
   width: 98%;
+  height: 100%;
   display: flex;
-}
-
-.recipes-list-body {
-  width: 100%;
-}
-.recipes-list-body {
-  display: block;
   overflow: auto;
   -webkit-overflow-scrolling: auto;
   max-height: 540px;
   @media (min-width: 1600px) {
     max-height: 700px;
   }
+
+
 }
 
-.recipes-list-main-table {
+.recipes-list-body {
+  width: 100%;
+}
+.recipes-list-body {
   tr {
 
-    line-height: 2em;
     border-bottom: 1px solid $colorTablets;
     color: $colorTablets;
     font-size: 18px;
@@ -103,7 +102,9 @@
       padding: 0 10px;
     }
   }
+
 }
+
 
 
 .recipes-list-description {
