@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zaplanuj Jedzonko</title>
+    <link href="https://fonts.googleapis.com/css?family=Charmonman:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/font_awesome/fontawesome.css">
+    <link rel="stylesheet" href="./css/main.css"/>
+</head>
+<body class="main-app">
+<header class="main-app-header row">
+    <div class="main-app-header-container col-9">
+        <h1 class="main-app-title">
+            <a href="index.html">
+                Zaplanuj<span> Jedzonko</span>
+            </a>
+        </h1>
+    </div>
+    <div class="main-app-name col-9">
+        <p class="main-app-input-name">
+            Imię
+        </p>
+        <div class="fa fa-user-circle">
+        </div>
+    </div>
+</header>
+
+<div class="main-app-content row">
+
+    <!--nawigacja po lewej stronie-->
+    <nav class="main-app-menu col-3">
+        <ul>
+            <li>
+                <a href="app.html">
+                    Pulpit
+                </a>
+            </li>
+            <li>
+                <a href="recipes.html">
+                    Przepisy
+                </a>
+            </li>
+            <li>
+                <a href="schedules.html">
+                    Plany
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="main-app-dashboard col-15">
+
+    <div class ="main-app-table" id="NewPlanMainDiv">
+    <table class="main-app-table col-18">
+        <thead class="main-app-table-header">
+        <tr id="addNewPlanHeader" class="main-app-table-title">
+            <th id='newPlan'>NOWY PLAN</th>
+            <td>  </td>
+            <td>  </td>
+            <td>  </td>
+            <td>  </td>
+            <th><button id="addNewPlan">Zapisz i zamknij</button></th>
+        </tr>
+        <tr >
+            <td colspan="6" class="main-app-table-days"></td>
+        </tr>
+        <tr>
+            <td colspan="6" id="planInsideNav">
+                <h2>Nazwa planu <input class="planNav1" id="nameOfPlan" type="text"></h2><br>
+                <h2 id="faststyle"><span id="superSpan">Opis planu</span><textarea class="planNav2" id="descriptionOfPlan" type="text"></textarea></h2>
+                <h2>Numer tygodnia <input class="planNav3" id="numberofWeek" type="number"></h2>
+            </td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td class="borderBottomTable"></td>
+            <td class="borderBottomTable"></td>
+            <td class="borderBottomTable"></td>
+            <td class="borderBottomTable"></td>
+            <td class="borderBottomTable"></td>
+        </tr>
+        <tr class="main-app-table-days">
+            <th>          </th>
+            <th>ŚNIADANIE</th>
+            <th>DRUGIE ŚNIADANIE</th>
+            <th>ZUPA</th>
+            <th>DRUGIE DANIE</th>
+            <th>KOLACJA</th>
+        </tr>
+        </thead>
+        <tbody class="main-app-table-plan">
+        <tr>
+            <th class="main-app-table-days">PONIEDZIAŁEK</th>
+            <td>
+                <label>
+                    <select id="testPLAN" name="dishes" class="addAllDishes monday">
+                        <option value='0'>Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes monday">
+                        <option>Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes monday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes monday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes monday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+
+        </tr>
+        <tr>
+            <th class="main-app-table-days">WTOREK</th>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes tuesday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes tuesday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes tuesday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes tuesday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes tuesday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+
+        </tr>
+        <tr>
+            <th class="main-app-table-days">ŚRODA</th>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes wednesday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes wednesday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes wednesday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes wednesday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes wednesday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+
+        </tr>
+        <tr>
+            <th class="main-app-table-days">CZWARTEK</th>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes thursday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes thursday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes thursday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes thursday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes thursday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+
+        </tr>
+        <tr>
+            <th class="main-app-table-days">PIĄTEK</th>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes friday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes friday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes friday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes friday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes friday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+
+        </tr>
+        <tr>
+            <th class="main-app-table-days">SOBOTA</th>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes saturday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes saturday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes saturday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes saturday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes saturday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <th class="main-app-table-days">NIEDZIELA</th>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes sunday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes sunday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes sunday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes sunday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <select name="dishes" class="addAllDishes sunday">
+                        <option value="0">Pyszne Danie</option>
+                    </select>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+
+        </table>
+    </div>
+    </div>
+</div>
+
+
+    <script src="./js/addNewPlanJS.js"></script>
+</body>
+</html>

@@ -293,7 +293,7 @@ table.main-app-table {
 
 
 .main-app-table-days {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   border-bottom: 1px solid $colorTablets;
   line-height: 3em;
@@ -320,7 +320,7 @@ table.main-app-table {
 .main-app-table-buttons {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   button {
     border: none;
     color: $colorLogo2;
@@ -369,18 +369,37 @@ table.main-app-table {
 
 }
 .planNav2{
-  margin-left: 75px;
-  width: 77%;
-  height: 80px;
+  margin-left: 195px;
+  max-width: 77%;
+  max-height: 80px;
+  min-width: 77%;
+  min-height: 80px;
   color: #5b605f;
+  display: inline-block;
 
 }
 .planNav3{
-  margin-left: 20px;
+  margin-left: 30px;
   height: 25px;
   font-size: 20px;
-  width: 30px;
+  width: 40px;
   color: #5b605f;
+  margin-top: 10px;
 
 }
+select{
+  max-width: 150px;
+}
 
+.borderBottomTable{
+  height: 10px;
+  border-bottom: 1px solid $colorTablets;
+}
+
+#faststyle{
+  position: relative;
+  span{
+    position: absolute;
+    display: block;
+  }
+}

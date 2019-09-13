@@ -82,3 +82,7 @@ if(localStorage.addPlan!=null) {
         });
     }
 }
+let addButton = document.querySelector('.addNewPlanButton');
+addButton.addEventListener('click', function () {
+    window.location.assign('../addNewPlan.html')
+});
