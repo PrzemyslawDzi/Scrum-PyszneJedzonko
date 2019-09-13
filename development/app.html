@@ -76,7 +76,7 @@
 
 
 <!--      widżety przyciski-->
-      <div class="main-app-buttons">
+      <div class="main-app-buttons hide">
 
         <button class="main-app-add-recipe col-3">
           <b class="far fa-plus-square"></b>
@@ -115,7 +115,7 @@
 
 
 <!--      tablica z planem-->
-      <div class ="main-app-table">
+      <div class ="main-app-table hide">
         <table class="main-app-table col-18">
           <thead class="main-app-table-header">
             <tr class="main-app-table-title">
@@ -189,22 +189,25 @@
 <!--dodawanie nowego planu-->
 
 
-      <div class ="main-app-table">
+      <div class ="main-app-table" id="NewPlanMainDiv" style="display: none">
         <table class="main-app-table col-18">
           <thead class="main-app-table-header">
           <tr id="addNewPlanHeader" class="main-app-table-title">
-            <th>NOWY PLAN</th>
+            <th id='newPlan'>NOWY PLAN</th>
             <td>  </td>
             <td>  </td>
             <td>  </td>
             <td>  </td>
             <th><button id="addNewPlan">Zapisz i zamknij</button></th>
           </tr>
+          <tr >
+            <td colspan="6" class="main-app-table-days"></td>
+          </tr>
           <tr>
-            <td colspan="6">
-            nazwa planu <input id="nameOfPlan" type="text"><br>
-              opis planu <input id="descriptionOfPlan" type="text"><br>
-              numer tygodnia <input id="numberofWeek" type="number">
+            <td colspan="6" id="planInsideNav">
+              <h2>Nazwa planu <input class="planNav1" id="nameOfPlan" type="text"></h2><br>
+              <h2>Opis planu <input class="planNav2" id="descriptionOfPlan" type="text"></h2><br>
+              <h2>Numer tygodnia <input class="planNav3" id="numberofWeek" type="number"></h2>
             </td>
 
           </tr>
@@ -223,35 +226,35 @@
             <td>
               <label>
                 <select id="testPLAN" name="dishes" class="addAllDishes monday">
-                <option value='0'>wybieraj jedzonko</option>
+                <option value='0'>Pyszne Danie</option>
               </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes monday">
-                <option>wybieraj jedzonko</option>
+                <option>Pyszne Danie</option>
               </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes monday">
-                <option value="0">wybieraj jedzonko</option>
+                <option value="0">Pyszne Danie</option>
               </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes monday">
-                <option value="0">wybieraj jedzonko</option>
+                <option value="0">Pyszne Danie</option>
               </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes monday">
-                <option value="0">wybieraj jedzonko</option>
+                <option value="0">Pyszne Danie</option>
               </select>
               </label>
             </td>
@@ -262,35 +265,35 @@
             <td>
               <label>
                 <select name="dishes" class="addAllDishes tuesday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes tuesday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes tuesday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes tuesday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes tuesday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
@@ -301,35 +304,35 @@
             <td>
               <label>
                 <select name="dishes" class="addAllDishes wednesday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes wednesday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes wednesday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes wednesday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes wednesday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
@@ -340,35 +343,35 @@
             <td>
               <label>
                 <select name="dishes" class="addAllDishes thursday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes thursday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes thursday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes thursday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes thursday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
@@ -379,35 +382,35 @@
             <td>
               <label>
                 <select name="dishes" class="addAllDishes friday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes friday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes friday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes friday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes friday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
@@ -418,35 +421,35 @@
             <td>
               <label>
                 <select name="dishes" class="addAllDishes saturday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes saturday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes saturday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes saturday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes saturday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
@@ -456,35 +459,35 @@
             <td>
               <label>
                 <select name="dishes" class="addAllDishes sunday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes sunday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes sunday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes sunday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>
             <td>
               <label>
                 <select name="dishes" class="addAllDishes sunday">
-                  <option value="0">wybieraj jedzonko</option>
+                  <option value="0">Pyszne Danie</option>
                 </select>
               </label>
             </td>

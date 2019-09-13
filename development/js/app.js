@@ -96,8 +96,15 @@ btnAddRecipe.addEventListener("click", function () {
 
 let btnAddPlan = document.querySelector(".main-app-add-plan");
 btnAddPlan.addEventListener("click", function () {
+    let plan = document.querySelector('#NewPlanMainDiv');
+    let hide = document.querySelectorAll('.hide');
+    hide.forEach(function (value) {
+       value.style.display = 'none'
+    });
+    plan.style.display = 'block';
 
-    alert("Dodaj nowy plan - taka funkcja będzie, jak już będzie layout")
+
+    // alert("Dodaj nowy plan - taka funkcja będzie, jak już będzie layout")
 });
 
 
@@ -180,7 +187,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let saturday = document.querySelectorAll('.saturday');
     let sunday = document.querySelectorAll('.sunday');
 
-
     let newPlan = {
         PlanName: '',
         PlanDescription: '',
@@ -209,39 +215,69 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     addNewPlanBtn.addEventListener('click', function () {
+
+
         newPlan.PlanName = nameOfPlan.value;
         newPlan.PlanDescription = descriptionOfPlan.value;
         newPlan.PlanWeekNumber = numberOfWeek.value;
         for (let i = 0; i <monday.length ; i++) {
             newPlan.firstDay.push(monday[i].options[monday[i].selectedIndex].text)
         }
-        for (let i = 0; i <tuesday.length ; i++) {
-            newPlan.secondDay.push(tuesday[i].options[tuesday[i].selectedIndex].text)
+        for (let j = 0; j <tuesday.length ; j++) {
+            newPlan.secondDay.push(tuesday[j].options[tuesday[j].selectedIndex].text)
         }
-        for (let i = 0; i <wednesday.length ; i++) {
-            newPlan.thirdDay.push(wednesday[i].options[wednesday[i].selectedIndex].text)
+        for (let x = 0; x <wednesday.length ; x++) {
+            newPlan.thirdDay.push(wednesday[x].options[wednesday[x].selectedIndex].text)
         }
-        for (let i = 0; i <thursday.length ; i++) {
-            newPlan.fourthDay.push(thursday[i].options[thursday[i].selectedIndex].text)
+        for (let y = 0; y <thursday.length ; y++) {
+            newPlan.fourthDay.push(thursday[y].options[thursday[y].selectedIndex].text)
         }
-        for (let i = 0; i <friday.length ; i++) {
-            newPlan.fifthDay.push(friday[i].options[friday[i].selectedIndex].text)
+        for (let z = 0; z <friday.length ; z++) {
+            newPlan.fifthDay.push(friday[z].options[friday[z].selectedIndex].text)
         }
-        for (let i = 0; i <saturday.length ; i++) {
-            newPlan.sixthDay.push(saturday[i].options[saturday[i].selectedIndex].text)
+        for (let c = 0; c <saturday.length ; c++) {
+            newPlan.sixthDay.push(saturday[c].options[saturday[c].selectedIndex].text)
         }
-        for (let i = 0; i <sunday.length ; i++) {
-            newPlan.seventhDay.push(sunday[i].options[sunday[i].selectedIndex].text)
+        for (let b = 0; b <sunday.length ; b++) {
+            newPlan.seventhDay.push(sunday[b].options[sunday[b].selectedIndex].text)
         }
 
-        saveaddPlanToLocalStorage(newPlan);
-        console.log(newPlan);
-    })
 
+
+        if (nameOfPlan.value.length === 0  || nameOfPlan.value.length > 50) {
+            nameOfPlan.style.border = 'solid red 1px';
+
+            alert('Wypełnij pole "Nazwa planu" Pamiętaj, że musi mieć mniej niż 50 znaków')
+        }
+        else if (descriptionOfPlan.value.length === 0 || descriptionOfPlan.value.length > 360){
+            descriptionOfPlan.style.border = 'solid red 1px';
+            alert('Wypełnij pole "Opis Planu" Pamiętaj, że musi mieć mniej niż 360 znaków')
+        }
+        else if (Number(numberOfWeek.value) < 0 || Number(numberOfWeek.value) > 52){
+            numberOfWeek.style.border = 'solid 1px red';
+            console.log(numberOfWeek.value);
+            alert('Wypełnij pole "Numer tygodnia" pamiętaj że ni możesz wpisać liczby ujemnej ani większej niż 52')
+        }
+        else {
+            saveaddPlanToLocalStorage(newPlan);
+            location.reload()
+        }
+
+
+    });
+
+    nameOfPlan.addEventListener('click', function () {
+        nameOfPlan.style.display = 'inline-block';
+        nameOfPlan.style.border = '1px $colorTablets solid'
+    });
+    descriptionOfPlan.addEventListener('click', function () {
+        descriptionOfPlan.style.border = '1px $colorTablets solid'
+    });
+    numberOfWeek.addEventListener('click', function () {
+        numberOfWeek.style.border = '$colorTablets solid 1px'
+    });
 
 });
 
 
 
-
-// newPlan.firstWeek =test.options[test.selectedIndex].text;
