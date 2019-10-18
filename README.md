@@ -1,11 +1,14 @@
-# ScrumLab
-This is a repository dedicated to ScrumLab front-end project.
+# Scrum
+This is a repository was made in Scrum Methodology by 4 people. We used JavaScript HTML and Scss. U should use this app 
+to create diet plans and recipies. We are still developing this aplication but u allready can use Main fetures! Have fun!
 
 ## How to start
 To start development follow this instruction:
 
 * `clone` this repo
 * `npm install` all necessary npm packages
+* Ve ve got a problem with firs compile scss to css so after `gulp` comand u should change anything in `main.scss` file
+and wait for compile. Then change it back and everything should work.
 
 
 ## Gulp usage
@@ -33,8 +36,3 @@ Avaliable commends for you to type in console:
 | - distribution/
 | - package.json
 | - gulpfile.js
-```
-
-***where:***
-`distribution` - is used to contain optimized files for the production site.
-`development`  - is used to contain source code.
