@@ -1,6 +1,6 @@
 # Scrum
 This is a repository was made in Scrum Methodology by 4 people. We used JavaScript HTML and Scss. U should use this app 
-to create diet plans and recipies. We are still developing this aplication but u allready can use Main fetures! Have fun!
+to create personalized diet plans and recipies. All of data is saved in local storage. We are still developing this aplication but u allready can use Main fetures! Have fun!
 
 ## How to start
 To start development follow this instruction:
